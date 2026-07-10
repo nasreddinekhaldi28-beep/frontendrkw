@@ -51,12 +51,12 @@ export default function HomePage() {
               <Link
                 key={card.href}
                 href={card.href}
-                className={`group block rounded-2xl border-2 p-6 transition-all ${card.color}`}
+                className={`group block rounded-2xl border-2 p-6 shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 ${card.color}`}
               >
-                <span className="text-5xl mb-4 block">{card.icon}</span>
+                <span className="text-5xl mb-4 block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">{card.icon}</span>
                 <h3 className="font-extrabold text-gray-800 text-lg mb-1">{card.title}</h3>
                 <p className="text-gray-500 text-sm mb-4">{card.sub}</p>
-                <span className="inline-block bg-brand-blue text-white text-sm font-bold px-4 py-2 rounded-xl group-hover:bg-brand-blue-light transition-colors">
+                <span className="inline-block bg-brand-blue text-white text-sm font-bold px-4 py-2 rounded-xl shadow-soft group-hover:bg-brand-blue-light group-hover:shadow-card transition-all">
                   {card.cta} ←
                 </span>
               </Link>
@@ -70,7 +70,7 @@ export default function HomePage() {
       <ReviewsCarousel />
 
       {/* Comparison vs clinic */}
-      <section className="py-14 bg-brand-blue text-white">
+      <section className="py-14 bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
             وفّر المال والوقت — الحل في بيتك
@@ -91,7 +91,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/collection"
-            className="mt-10 inline-block bg-brand-green hover:bg-brand-green-dark text-white font-extrabold px-10 py-4 rounded-xl text-base transition-all"
+            className="mt-10 inline-block bg-brand-green hover:bg-brand-green-dark text-white font-extrabold px-10 py-4 rounded-xl text-base shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 active:translate-y-0 transition-all"
           >
             اطلب الآن بالدفع عند الاستلام 💵
           </Link>

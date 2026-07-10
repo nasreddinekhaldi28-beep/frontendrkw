@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-gradient-to-l from-brand-blue to-brand-blue-light py-16 text-white text-center px-4">
+      <div className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light py-16 text-white text-center px-4">
         <h1 className="text-3xl font-extrabold mb-3">من نحن</h1>
         <p className="text-blue-100 max-w-2xl mx-auto">
           نحن راحة الكويت — علامة تجارية كويتية مخصصة لعلاج الألم المزمن في البيت
@@ -32,12 +32,12 @@ export default function AboutPage() {
               لهذا أسسنا <strong className="text-brand-blue">راحة الكويت</strong> — لنجلب التقنيات المستخدمة في عيادات الفيزيوثيرابي مباشرة إلى بيوتكم، بسعر معقول، وبضمان دفع عند الاستلام.
             </p>
           </div>
-          <div className="relative aspect-square rounded-2xl overflow-hidden">
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-card ring-1 ring-black/5">
             <Image
               src="https://placehold.co/500x500/1E3A8A/FFFFFF?text=راحة+الكويت"
               alt="قصة راحة الكويت"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-[600ms] ease-smooth hover:scale-105"
             />
           </div>
         </div>
@@ -59,8 +59,8 @@ export default function AboutPage() {
               { icon: "🤝", title: "الثقة فوق كل شيء", desc: "الدفع عند الاستلام ليس مجرد خيار — هو التزامنا الدائم بثقة عملائنا." },
               { icon: "💪", title: "نتيجة حقيقية", desc: "لا نبيع أملاً — نبيع منتجات اختبرها آلاف الكويتيين وأثنوا عليها." },
             ].map((v) => (
-              <div key={v.title} className="bg-white rounded-xl border border-gray-100 p-5">
-                <span className="text-4xl mb-3 block">{v.icon}</span>
+              <div key={v.title} className="group bg-white rounded-xl border border-gray-100 p-5 shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300">
+                <span className="text-4xl mb-3 block transition-transform duration-300 group-hover:scale-110">{v.icon}</span>
                 <h3 className="font-bold text-gray-800 mb-2">{v.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
               </div>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
 
         {/* Numbers */}
-        <div className="bg-brand-blue text-white rounded-2xl p-8">
+        <div className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light text-white rounded-2xl p-8 shadow-card">
           <h2 className="text-2xl font-extrabold text-center mb-8">راحة الكويت بالأرقام</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
@@ -78,7 +78,7 @@ export default function AboutPage() {
               { num: "7 أيام", label: "ضمان استرجاع" },
               { num: "1-2 يوم", label: "سرعة التوصيل" },
             ].map((s) => (
-              <div key={s.label} className="bg-white/10 rounded-xl p-4">
+              <div key={s.label} className="bg-white/10 ring-1 ring-white/10 rounded-xl p-4 hover:bg-white/15 transition-colors">
                 <p className="text-2xl font-extrabold text-brand-gold">{s.num}</p>
                 <p className="text-xs text-blue-100 mt-1">{s.label}</p>
               </div>

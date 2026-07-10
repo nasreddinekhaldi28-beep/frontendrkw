@@ -43,7 +43,7 @@ export default function CartDrawer() {
         aria-label="سلة التسوق"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b bg-brand-blue text-white">
+        <div className="flex items-center justify-between px-5 py-4 border-b bg-gradient-to-l from-brand-blue-dark to-brand-blue text-white">
           <div className="flex items-center gap-2">
             <ShoppingBag className="w-5 h-5" />
             <h2 className="font-bold text-base">سلة التسوق</h2>
@@ -65,7 +65,7 @@ export default function CartDrawer() {
             <Link
               href="/collection"
               onClick={closeDrawer}
-              className="bg-brand-blue text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-blue-light transition-colors"
+              className="bg-brand-blue text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-blue-light shadow-soft hover:shadow-card active:scale-95 transition-all"
             >
               تصفح المنتجات
             </Link>
@@ -90,7 +90,7 @@ export default function CartDrawer() {
                     {crossSells.map((p) => (
                       <div
                         key={p.sku}
-                        className="flex items-center gap-3 bg-blue-50 rounded-xl p-3"
+                        className="flex items-center gap-3 bg-blue-50 rounded-xl p-3 ring-1 ring-brand-blue/5 hover:ring-brand-blue/20 transition-all"
                       >
                         <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
                           <Image src={p.image} alt={p.nameAr} fill className="object-cover" />
@@ -112,7 +112,7 @@ export default function CartDrawer() {
                               lineTotal: p.basePrice,
                             });
                           }}
-                          className="flex-shrink-0 bg-brand-blue text-white rounded-lg p-2 hover:bg-brand-blue-light transition-colors"
+                          className="flex-shrink-0 bg-brand-blue text-white rounded-lg p-2 hover:bg-brand-blue-light shadow-soft active:scale-90 transition-all"
                           aria-label={`أضف ${p.nameAr}`}
                         >
                           <Plus className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function CartDrawer() {
               </div>
               <button
                 onClick={handleCheckout}
-                className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-bold py-4 rounded-xl text-base transition-colors"
+                className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-bold py-4 rounded-xl text-base shadow-cta hover:shadow-cta-hover active:scale-[0.99] transition-all"
               >
                 إتمام الطلب ←
               </button>

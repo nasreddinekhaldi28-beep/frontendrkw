@@ -13,7 +13,7 @@ export default function ShippingPage() {
           { icon: "🇰🇼", title: "جميع مناطق الكويت", desc: "نغطي الكويت كاملاً" },
           { icon: "💵", title: "الدفع عند الاستلام", desc: "لا دفع مسبق" },
         ].map((b) => (
-          <div key={b.title} className="bg-blue-50 rounded-xl p-4 text-center">
+          <div key={b.title} className="bg-blue-50 rounded-xl p-4 text-center shadow-soft ring-1 ring-brand-blue/5">
             <span className="text-3xl mb-2 block">{b.icon}</span>
             <p className="font-bold text-gray-800 text-sm">{b.title}</p>
             <p className="text-gray-500 text-xs mt-1">{b.desc}</p>

@@ -15,16 +15,16 @@ export default function PainMirror({ product }: { product: Product }) {
           <p className="text-gray-500 mt-2">إذا قلت "نعم" على واحدة من هذه — هذا المنتج صُمّم لك</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 divide-y divide-gray-50">
+        <div className="bg-white rounded-2xl shadow-card border border-gray-100 divide-y divide-gray-100 overflow-hidden">
           {product.painPoints.map((point, i) => (
-            <div key={i} className="flex items-start gap-4 px-6 py-4">
+            <div key={i} className="flex items-start gap-4 px-6 py-4 hover:bg-red-50/40 transition-colors">
               <CheckCircle2 className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" />
               <p className="text-gray-700 font-medium leading-relaxed">{point}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 bg-brand-blue text-white rounded-2xl p-6 text-center">
+        <div className="mt-8 bg-gradient-to-l from-brand-blue-dark to-brand-blue text-white rounded-2xl p-6 text-center shadow-card">
           <p className="text-lg font-bold leading-relaxed">
             لا تقبل الألم المزمن كجزء من حياتك.
             <br />

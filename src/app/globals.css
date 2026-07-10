@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -21,29 +22,60 @@ body {
   background: #ffffff;
   color: #1f2937;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
+}
+
+/* Smoother default transitions on interactive elements */
+a,
+button {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 220ms;
+}
+
+/* Refined typography rhythm for headings */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Selection color on-brand */
+::selection {
+  background: #1E3A8A;
+  color: #ffffff;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 9px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #eef2f9;
 }
 ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2D4ED8 0%, #1E3A8A 100%);
+  border-radius: 999px;
+  border: 2px solid #eef2f9;
+}
+::-webkit-scrollbar-thumb:hover {
   background: #1E3A8A;
-  border-radius: 3px;
 }
 
 /* Focus ring */
 :focus-visible {
   outline: 2px solid #1E3A8A;
   outline-offset: 2px;
+  border-radius: 6px;
 }
 
 /* Drawer animation */
 .drawer-overlay {
-  animation: fadeIn 0.2s ease-out;
+  animation: fadeIn 0.25s ease-out;
+  backdrop-filter: blur(2px);
 }
 
 @keyframes fadeIn {
@@ -56,8 +88,18 @@ body {
   to { transform: translateX(0); }
 }
 
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 .drawer-panel {
-  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideInRight 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modal pop-in for dialogs */
+.drawer-overlay > div[role="dialog"] {
+  animation: popIn 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* OTO timer ring */
@@ -66,7 +108,49 @@ body {
   to { stroke-dashoffset: 283; }
 }
 
+/* Subtle floating accent used by hero badges */
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Shimmer sweep for premium CTAs */
+@keyframes shimmerSweep {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
 /* Custom gradient sections */
 .section-alt {
-  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  background:
+    radial-gradient(1200px 400px at 100% -10%, rgba(45, 78, 216, 0.06), transparent 60%),
+    linear-gradient(135deg, #f2f6ff 0%, #ffffff 62%);
+}
+
+/* Reusable soft elevation utilities (used via existing shadow classes too) */
+.shadow-soft {
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px -12px rgba(30, 58, 138, 0.18);
+}
+.shadow-card {
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 18px 40px -20px rgba(30, 58, 138, 0.28);
+}
+
+/* Line clamp helper (kept for existing usage) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

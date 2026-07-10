@@ -12,8 +12,8 @@ export default function TrustStrip() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-0">
           {badges.map((b) => (
-            <div key={b.title} className="flex items-center gap-3 px-4">
-              <span className="text-3xl">{b.icon}</span>
+            <div key={b.title} className="flex items-center gap-3 px-4 py-1 rounded-xl hover:bg-gray-50 transition-colors">
+              <span className="text-3xl transition-transform duration-300 hover:scale-110">{b.icon}</span>
               <div>
                 <p className="font-bold text-gray-800 text-sm">{b.title}</p>
                 <p className="text-xs text-gray-400">{b.sub}</p>

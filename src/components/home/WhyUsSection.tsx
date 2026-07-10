@@ -49,9 +49,9 @@ export default function WhyUsSection() {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-all"
+              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300"
             >
-              <span className="text-4xl mb-4 block">{r.icon}</span>
+              <span className="text-4xl mb-4 block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">{r.icon}</span>
               <h3 className="font-extrabold text-gray-800 text-base mb-2">{r.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
             </div>

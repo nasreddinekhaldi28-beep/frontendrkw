@@ -128,12 +128,12 @@ export default function OTOModal() {
 
         <div className="px-5 py-5 space-y-5">
           {/* Offer card */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-100">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-100 shadow-soft">
             <p className="text-xs font-bold text-brand-blue mb-3 text-center uppercase tracking-wider">
               🎁 عرض لمرة واحدة فقط لتكمل راحتك
             </p>
             <div className="flex gap-4 items-center">
-              <div className="relative w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 shadow-md">
+              <div className="relative w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 shadow-card ring-1 ring-black/5">
                 <Image
                   src={otoProduct.image}
                   alt={otoProduct.nameAr}
@@ -169,7 +169,7 @@ export default function OTOModal() {
           {/* CTA buttons */}
           <button
             onClick={onAccept}
-            className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-extrabold py-4 rounded-xl text-base transition-colors shadow-lg"
+            className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-extrabold py-4 rounded-xl text-base shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 active:translate-y-0 transition-all"
           >
             نعم، أضف العرض لطلبي ← ({formatKWD(otoProduct.otoPrice)})
           </button>

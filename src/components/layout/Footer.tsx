@@ -18,7 +18,7 @@ const infoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-blue text-white mt-16">
+    <footer className="bg-gradient-to-b from-brand-blue to-brand-blue-dark text-white mt-16">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
               {["💵 الدفع عند الاستلام", "🇰🇼 توصيل 1-2 يوم", "✅ ضمان 7 أيام"].map((b) => (
-                <span key={b} className="bg-white/10 px-3 py-1 rounded-full">{b}</span>
+                <span key={b} className="bg-white/10 ring-1 ring-white/10 px-3 py-1 rounded-full backdrop-blur-sm hover:bg-white/15 transition-colors">{b}</span>
               ))}
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {productLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-blue-100 hover:text-white text-sm transition-colors">
+                  <Link href={l.href} className="inline-block text-blue-100 hover:text-white text-sm hover:translate-x-[-3px] transition-all">
                     {l.label}
                   </Link>
                 </li>
@@ -57,7 +57,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {infoLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-blue-100 hover:text-white text-sm transition-colors">
+                  <Link href={l.href} className="inline-block text-blue-100 hover:text-white text-sm hover:translate-x-[-3px] transition-all">
                     {l.label}
                   </Link>
                 </li>

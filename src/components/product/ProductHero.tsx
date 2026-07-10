@@ -39,16 +39,16 @@ export default function ProductHero({ product }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Images */}
           <div className="space-y-3">
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50 shadow-card ring-1 ring-black/5">
               <Image
                 src={product.images[mainImg] || product.image}
                 alt={product.nameAr}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-[600ms] ease-smooth hover:scale-105"
                 priority
               />
               {product.badge && (
-                <span className="absolute top-4 start-4 bg-brand-gold text-white text-xs font-extrabold px-3 py-1.5 rounded-full">
+                <span className="absolute top-4 start-4 bg-brand-gold text-white text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md">
                   {product.badge}
                 </span>
               )}
@@ -61,7 +61,9 @@ export default function ProductHero({ product }: Props) {
                     onClick={() => setMainImg(i)}
                     className={cn(
                       "relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0",
-                      mainImg === i ? "border-brand-blue" : "border-gray-200 hover:border-gray-400"
+                      mainImg === i
+                        ? "border-brand-blue ring-2 ring-brand-blue/20 scale-105"
+                        : "border-gray-200 hover:border-gray-400 opacity-80 hover:opacity-100"
                     )}
                   >
                     <Image src={img} alt={`صورة ${i + 1}`} fill className="object-cover" />
@@ -98,8 +100,8 @@ export default function ProductHero({ product }: Props) {
                     className={cn(
                       "w-full flex items-center justify-between p-4 rounded-xl border-2 transition-all text-start",
                       selectedOfferIdx === i
-                        ? "border-brand-blue bg-blue-50 shadow-sm"
-                        : "border-gray-200 hover:border-gray-400 bg-white"
+                        ? "border-brand-blue bg-blue-50 shadow-soft ring-1 ring-brand-blue/10"
+                        : "border-gray-200 hover:border-brand-blue/40 hover:bg-blue-50/40 bg-white"
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -145,7 +147,7 @@ export default function ProductHero({ product }: Props) {
             {/* CTA */}
             <button
               onClick={handleAddToCart}
-              className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-extrabold py-5 rounded-xl text-lg transition-all shadow-lg hover:shadow-xl active:scale-[0.99]"
+              className="w-full bg-brand-green hover:bg-brand-green-dark text-white font-extrabold py-5 rounded-xl text-lg shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all"
             >
               🛒 أضف إلى السلة — الدفع عند الاستلام
             </button>
@@ -157,7 +159,7 @@ export default function ProductHero({ product }: Props) {
                 { icon: ShieldCheck, text: "ضمان 7 أيام" },
                 { icon: RefreshCw, text: "استرجاع مجاني" },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex flex-col items-center gap-1.5 bg-gray-50 rounded-xl p-3 text-center">
+                <div key={text} className="flex flex-col items-center gap-1.5 bg-gray-50 rounded-xl p-3 text-center hover:bg-blue-50 transition-colors">
                   <Icon className="w-5 h-5 text-brand-blue" />
                   <p className="text-[11px] text-gray-600 font-medium leading-tight">{text}</p>
                 </div>

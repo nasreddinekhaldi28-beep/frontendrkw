@@ -20,7 +20,7 @@ export default function CollectionAddToCart({ product }: { product: Product }) {
         trackAddToCart(product.sku, product.basePrice);
         openDrawer();
       }}
-      className="bg-brand-green hover:bg-brand-green-dark text-white font-bold py-3 rounded-xl text-sm transition-colors"
+      className="bg-brand-green hover:bg-brand-green-dark text-white font-bold py-3 rounded-xl text-sm shadow-cta hover:shadow-cta-hover active:scale-95 transition-all"
     >
       أضف للسلة
     </button>

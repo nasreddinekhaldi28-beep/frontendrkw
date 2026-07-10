@@ -102,7 +102,7 @@ export default function CheckoutModal() {
                 { icon: ShieldCheck, label: "ضمان 7 أيام" },
                 { icon: Clock, label: "الدفع عند الاستلام" },
               ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex flex-col items-center gap-1 bg-blue-50 rounded-xl p-2">
+                <div key={label} className="flex flex-col items-center gap-1 bg-blue-50 rounded-xl p-2 ring-1 ring-brand-blue/5">
                   <Icon className="w-5 h-5 text-brand-blue" />
                   <p className="text-[11px] text-gray-600 text-center leading-tight">{label}</p>
                 </div>
@@ -120,7 +120,7 @@ export default function CheckoutModal() {
                   {...register("name")}
                   type="text"
                   placeholder="محمد أحمد العازمي"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent hover:border-gray-400 transition-all"
                   autoComplete="name"
                 />
                 {errors.name && (
@@ -138,7 +138,7 @@ export default function CheckoutModal() {
                   type="tel"
                   dir="ltr"
                   placeholder="065432198"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base bg-gray-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent hover:border-gray-400 transition-all"
                   autoComplete="tel"
                   maxLength={9}
                 />
@@ -161,7 +161,7 @@ export default function CheckoutModal() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-brand-green hover:bg-brand-green-dark disabled:opacity-60 text-white font-extrabold py-4 rounded-xl text-lg transition-colors shadow-lg"
+                className="w-full bg-brand-green hover:bg-brand-green-dark disabled:opacity-60 text-white font-extrabold py-4 rounded-xl text-lg shadow-cta hover:shadow-cta-hover active:scale-[0.99] transition-all"
               >
                 {isSubmitting ? "جاري التحقق..." : "تأكيد الطلب — الدفع عند الاستلام 💵"}
               </button>

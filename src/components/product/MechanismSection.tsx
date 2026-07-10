@@ -31,19 +31,19 @@ export default function MechanismSection({ product }: { product: Product }) {
               >
                 {/* Image */}
                 <div className={!isEven ? "md:[direction:ltr]" : ""}>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center shadow-card ring-1 ring-black/5 group">
                     <Image
                       src={`https://placehold.co/600x450/1E3A8A/FFFFFF?text=${encodeURIComponent(step.titleAr)}`}
                       alt={step.titleAr}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105"
                     />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className={!isEven ? "md:[direction:ltr]" : ""}>
-                  <div className="text-5xl mb-4">{step.icon}</div>
+                  <div className="text-5xl mb-4 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 shadow-soft">{step.icon}</div>
                   <h3 className="text-xl font-extrabold text-brand-blue mb-3">{step.titleAr}</h3>
                   <p className="text-gray-600 leading-relaxed text-base">{step.descAr}</p>
                 </div>
@@ -53,7 +53,7 @@ export default function MechanismSection({ product }: { product: Product }) {
         </div>
 
         {/* Benefits list */}
-        <div className="mt-14 bg-gradient-to-l from-brand-blue to-brand-blue-light text-white rounded-2xl p-8">
+        <div className="mt-14 bg-gradient-to-l from-brand-blue-dark via-brand-blue to-brand-blue-light text-white rounded-2xl p-8 shadow-card">
           <h3 className="text-xl font-extrabold mb-6 text-center">الفوائد بالأرقام</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
@@ -62,7 +62,7 @@ export default function MechanismSection({ product }: { product: Product }) {
               { num: "7", unit: "أيام", desc: "ضمان استرجاع كامل" },
               { num: "2000+", unit: "عميل", desc: "في الكويت يثقون فينا" },
             ].map((stat) => (
-              <div key={stat.desc} className="bg-white/10 rounded-xl p-4">
+              <div key={stat.desc} className="bg-white/10 ring-1 ring-white/10 rounded-xl p-4 hover:bg-white/15 transition-colors">
                 <p className="text-3xl font-extrabold text-brand-gold">
                   {stat.num}
                   <span className="text-lg">{stat.unit}</span>

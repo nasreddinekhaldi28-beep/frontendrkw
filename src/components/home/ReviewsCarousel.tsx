@@ -63,7 +63,7 @@ export default function ReviewsCarousel() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reviews.map((r, i) => (
-            <div key={i} className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+            <div key={i} className="bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:bg-white hover:shadow-card transition-all duration-300">
               <div className="flex justify-between items-start mb-3">
                 <div>
                   <p className="font-bold text-gray-800">{r.name}</p>

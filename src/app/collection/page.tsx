@@ -15,12 +15,12 @@ export default function CollectionPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Banner */}
-      <div className="bg-gradient-to-l from-brand-blue to-brand-blue-light py-12 text-white text-center">
+      <div className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light py-12 text-white text-center">
         <h1 className="text-3xl font-extrabold mb-2">متجرنا الكامل</h1>
         <p className="text-blue-100">علاج احترافي في بيتك — الدفع عند الاستلام</p>
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm">
           {["🇰🇼 توصيل 1-2 يوم", "💵 الدفع عند الاستلام", "✅ ضمان 7 أيام"].map((b) => (
-            <span key={b} className="bg-white/10 px-4 py-1.5 rounded-full">{b}</span>
+            <span key={b} className="bg-white/10 ring-1 ring-white/15 backdrop-blur-sm px-4 py-1.5 rounded-full">{b}</span>
           ))}
         </div>
       </div>
@@ -31,7 +31,7 @@ export default function CollectionPage() {
           {products.map((p) => (
             <div
               key={p.sku}
-              className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               <Link href={`/products/${p.slug}`} className="block">
                 <div className="relative aspect-square bg-gray-50 overflow-hidden">
@@ -39,10 +39,11 @@ export default function CollectionPage() {
                     src={p.image}
                     alt={p.nameAr}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-[1.07] transition-transform duration-[600ms] ease-smooth"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {p.badge && (
-                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-extrabold px-3 py-1 rounded-full">
+                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
                       {p.badge}
                     </span>
                   )}
@@ -81,7 +82,7 @@ export default function CollectionPage() {
                 <div className="mt-5 grid grid-cols-2 gap-2">
                   <Link
                     href={`/products/${p.slug}`}
-                    className="text-center bg-brand-blue hover:bg-brand-blue-light text-white font-bold py-3 rounded-xl text-sm transition-colors"
+                    className="text-center bg-brand-blue hover:bg-brand-blue-light text-white font-bold py-3 rounded-xl text-sm shadow-soft hover:shadow-card active:scale-95 transition-all"
                   >
                     التفاصيل
                   </Link>

@@ -18,9 +18,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-soft border-b border-gray-100/80 supports-[backdrop-filter]:bg-white/80">
       {/* Trust bar */}
-      <div className="bg-brand-blue text-white text-xs py-1.5 text-center">
+      <div className="bg-gradient-to-l from-brand-blue-dark via-brand-blue to-brand-blue-light text-white text-xs py-2 text-center tracking-wide">
         <span className="hidden sm:inline">⭐ 4.9/5 من 2,400+ عميل كويتي &nbsp;·&nbsp; </span>
         🇰🇼 توصيل 1-2 يوم &nbsp;·&nbsp; 💵 الدفع عند الاستلام &nbsp;·&nbsp; ✅ ضمان 7 أيام
       </div>
@@ -43,7 +43,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-gray-700 hover:text-brand-blue font-medium transition-colors text-sm"
+              className="relative text-gray-700 hover:text-brand-blue font-medium text-sm py-1 after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-0 after:rounded-full after:bg-brand-blue after:transition-all after:duration-300 hover:after:w-full"
             >
               {l.label}
             </Link>
@@ -55,17 +55,17 @@ export default function Header() {
           <button
             onClick={() => openDrawer()}
             aria-label="السلة"
-            className="relative p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="relative p-2.5 rounded-full hover:bg-brand-blue/10 active:scale-95 transition-all"
           >
             <ShoppingCart className="w-6 h-6 text-brand-blue" />
             {count > 0 && (
-              <span className="absolute -top-1 -start-1 bg-brand-green text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute -top-0.5 -start-0.5 bg-brand-green text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-cta ring-2 ring-white animate-pop-in">
                 {count}
               </span>
             )}
           </button>
           <button
-            className="md:hidden p-2 rounded-full hover:bg-gray-100"
+            className="md:hidden p-2.5 rounded-full hover:bg-brand-blue/10 active:scale-95 transition-all"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="القائمة"
           >

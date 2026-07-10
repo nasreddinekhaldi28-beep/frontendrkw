@@ -3,18 +3,18 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-br from-brand-blue via-brand-blue to-brand-blue-light text-white py-16 md:py-24 overflow-hidden relative">
+    <section className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light text-white py-16 md:py-24 overflow-hidden relative">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 start-10 w-64 h-64 rounded-full bg-white" />
-        <div className="absolute bottom-10 end-20 w-96 h-96 rounded-full bg-white" />
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 start-10 w-64 h-64 rounded-full bg-white blur-3xl" />
+        <div className="absolute bottom-10 end-20 w-96 h-96 rounded-full bg-brand-gold/40 blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Copy */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur rounded-full px-4 py-2 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 ring-1 ring-white/20 backdrop-blur rounded-full px-4 py-2 text-sm mb-6 shadow-lg">
               <span>🏆</span>
               <span className="font-medium">أجهزة العلاج المنزلي #1 في الكويت</span>
             </div>
@@ -51,13 +51,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/collection"
-                className="bg-brand-green hover:bg-brand-green-dark text-white font-extrabold px-8 py-4 rounded-xl text-base text-center transition-all shadow-lg hover:shadow-xl"
+                className="bg-brand-green hover:bg-brand-green-dark text-white font-extrabold px-8 py-4 rounded-xl text-base text-center shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 active:translate-y-0 transition-all"
               >
                 اطلب الآن — الدفع عند الاستلام 💵
               </Link>
               <Link
                 href="#pain-selector"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-4 rounded-xl text-base text-center transition-all"
+                className="bg-white/10 ring-1 ring-white/20 hover:bg-white/20 text-white font-bold px-6 py-4 rounded-xl text-base text-center backdrop-blur-sm transition-all"
               >
                 اعرف المناسب لك ←
               </Link>
@@ -66,7 +66,8 @@ export default function HeroSection() {
 
           {/* Hero image */}
           <div className="relative">
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-tr from-brand-gold/30 to-white/10 blur-2xl" />
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20">
               <Image
                 src="https://placehold.co/600x600/2D4ED8/FFFFFF?text=راحة+الكويت"
                 alt="راحة الكويت - أجهزة العلاج"
@@ -76,11 +77,11 @@ export default function HeroSection() {
               />
             </div>
             {/* Floating badges */}
-            <div className="absolute -bottom-4 -start-4 bg-white text-gray-800 rounded-2xl shadow-xl p-4 text-center min-w-[100px]">
+            <div className="absolute -bottom-4 -start-4 bg-white text-gray-800 rounded-2xl shadow-card p-4 text-center min-w-[100px] ring-1 ring-black/5 animate-float-soft">
               <p className="text-2xl font-extrabold text-brand-green">٩٤٪</p>
               <p className="text-xs text-gray-500 mt-0.5">يوصون بنا</p>
             </div>
-            <div className="absolute -top-4 -end-4 bg-brand-gold text-white rounded-2xl shadow-xl p-4 text-center min-w-[100px]">
+            <div className="absolute -top-4 -end-4 bg-gradient-to-br from-brand-gold-light to-brand-gold text-white rounded-2xl shadow-card p-4 text-center min-w-[100px] animate-float-soft [animation-delay:1.2s]">
               <p className="text-2xl font-extrabold">1-2</p>
               <p className="text-xs mt-0.5">يوم توصيل</p>
             </div>

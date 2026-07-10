@@ -21,7 +21,7 @@ export default function ReviewsSection({ product }: { product: Product }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {product.reviews.map((review, i) => (
-            <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div key={i} className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-card hover:-translate-y-0.5 transition-all duration-300">
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <p className="font-bold text-gray-800">{review.nameAr}</p>

@@ -40,7 +40,7 @@ export default function ThankYouPage() {
       <div className="max-w-2xl mx-auto px-4 py-12">
         {/* Success icon */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-5">
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-5 shadow-cta ring-4 ring-green-50 animate-pop-in">
             <CheckCircle2 className="w-14 h-14 text-brand-green" />
           </div>
           <h1 className="text-3xl font-extrabold text-gray-900 mb-2">
@@ -58,7 +58,7 @@ export default function ThankYouPage() {
         </div>
 
         {/* Delivery timeline */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+        <div className="bg-white rounded-2xl shadow-card border border-gray-100 p-6 mb-6">
           <h2 className="font-extrabold text-gray-800 mb-5 text-lg">ماذا سيحدث بعد ذلك؟</h2>
           <div className="space-y-4">
             {[
@@ -99,7 +99,7 @@ export default function ThankYouPage() {
 
         {/* Order summary */}
         {order && (
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <div className="bg-white rounded-2xl shadow-card border border-gray-100 p-6 mb-6">
             <h2 className="font-extrabold text-gray-800 mb-4">ملخص طلبك</h2>
             <div className="space-y-2 divide-y divide-gray-50">
               {order.items.map((item, i) => (
@@ -126,7 +126,7 @@ export default function ThankYouPage() {
         )}
 
         {/* CRO confirmation message */}
-        <div className="bg-brand-blue text-white rounded-2xl p-6 mb-6 text-center">
+        <div className="bg-gradient-to-l from-brand-blue-dark to-brand-blue text-white rounded-2xl p-6 mb-6 text-center shadow-card">
           <p className="text-xl font-extrabold mb-2">طلبك في أمان تام ✅</p>
           <p className="text-blue-100 text-sm leading-relaxed">
             لا تقلق — لا دفع إلا عند الاستلام. وإذا ما عجبك المنتج خلال 7 أيام، نرجع لك فلوسك كاملة بدون أسئلة.
@@ -138,7 +138,7 @@ export default function ThankYouPage() {
           <p className="text-gray-500 text-sm mb-4">تريد إضافة منتج آخر؟ طلب جديد بنفس السهولة</p>
           <Link
             href="/collection"
-            className="inline-block bg-brand-green hover:bg-brand-green-dark text-white font-bold px-8 py-3 rounded-xl transition-colors"
+            className="inline-block bg-brand-green hover:bg-brand-green-dark text-white font-bold px-8 py-3 rounded-xl shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 active:translate-y-0 transition-all"
           >
             تصفح منتجات أخرى ←
           </Link>

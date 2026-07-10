@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-l from-brand-blue to-brand-blue-light py-14 text-white text-center px-4">
+      <div className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light py-14 text-white text-center px-4">
         <h1 className="text-3xl font-extrabold mb-2">تواصل معنا</h1>
         <p className="text-blue-100">نحن هنا لمساعدتك — تواصل معنا بأي طريقة تناسبك</p>
       </div>
@@ -31,7 +31,7 @@ export default function ContactPage() {
               },
             ].map(({ icon: Icon, title, lines }) => (
               <div key={title} className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft">
                   <Icon className="w-6 h-6 text-brand-blue" />
                 </div>
                 <div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 { q: "هل الدفع مسبق؟", a: "لا — الدفع فقط عند الاستلام." },
                 { q: "هل المنتجات آمنة؟", a: "نعم، جميع أجهزتنا معتمدة بمعايير السلامة الدولية." },
               ].map(({ q, a }) => (
-                <div key={q} className="bg-gray-50 rounded-xl p-4">
+                <div key={q} className="bg-gray-50 rounded-xl p-4 hover:bg-white hover:shadow-soft transition-all">
                   <p className="font-bold text-gray-800 text-sm mb-1">{q}</p>
                   <p className="text-gray-500 text-sm">{a}</p>
                 </div>

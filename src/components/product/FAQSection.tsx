@@ -15,7 +15,7 @@ export default function FAQSection({ product }: { product: Product }) {
         </div>
         <div className="space-y-3">
           {product.faqs.map((faq, i) => (
-            <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+            <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-soft hover:border-brand-blue/30 transition-colors">
               <button
                 className="w-full flex items-center justify-between px-5 py-4 text-start"
                 onClick={() => setOpen(open === i ? null : i)}

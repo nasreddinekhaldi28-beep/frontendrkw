@@ -43,13 +43,13 @@ export default function CrossSells({ currentProduct }: { currentProduct: Product
           {others.map((p) => (
             <div
               key={p.sku}
-              className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-all"
+              className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-soft hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               <Link href={`/products/${p.slug}`} className="block">
-                <div className="relative aspect-[3/2]">
-                  <Image src={p.image} alt={p.nameAr} fill className="object-cover" />
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image src={p.image} alt={p.nameAr} fill className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105" />
                   {p.badge && (
-                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-bold px-2 py-1 rounded-full">
+                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
                       {p.badge}
                     </span>
                   )}
@@ -68,7 +68,7 @@ export default function CrossSells({ currentProduct }: { currentProduct: Product
                   <span className="text-xl font-extrabold text-brand-blue">{formatKWD(p.basePrice)}</span>
                   <button
                     onClick={() => handleAdd(p)}
-                    className="flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-light text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors"
+                    className="flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-light text-white font-bold px-4 py-2 rounded-xl text-sm shadow-soft hover:shadow-card active:scale-95 transition-all"
                   >
                     <Plus className="w-4 h-4" />
                     أضف للسلة

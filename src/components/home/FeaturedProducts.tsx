@@ -27,7 +27,7 @@ export default function FeaturedProducts() {
           {products.map((p) => (
             <div
               key={p.sku}
-              className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               {/* Image */}
               <Link href={`/products/${p.slug}`} className="block">
@@ -36,10 +36,11 @@ export default function FeaturedProducts() {
                     src={p.image}
                     alt={p.nameAr}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-[1.07] transition-transform duration-[600ms] ease-smooth"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {p.badge && (
-                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-extrabold px-3 py-1 rounded-full">
+                    <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
                       {p.badge}
                     </span>
                   )}
@@ -87,7 +88,7 @@ export default function FeaturedProducts() {
                       trackAddToCart(p.sku, p.basePrice);
                       openDrawer();
                     }}
-                    className="bg-brand-green hover:bg-brand-green-dark text-white font-bold px-4 py-2.5 rounded-xl text-sm transition-colors"
+                    className="bg-brand-green hover:bg-brand-green-dark text-white font-bold px-4 py-2.5 rounded-xl text-sm shadow-cta hover:shadow-cta-hover active:scale-95 transition-all"
                   >
                     أضف للسلة
                   </button>
