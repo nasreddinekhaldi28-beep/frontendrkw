@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/lib/cart-store";
-import { products } from "@/lib/products";
+import { heroProducts } from "@/lib/products";
 import { formatKWD } from "@/lib/utils";
 import { trackAddToCart } from "@/lib/pixels";
 import StarRating from "@/components/ui/StarRating";
@@ -24,7 +24,7 @@ export default function FeaturedProducts() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {products.map((p) => (
+          {heroProducts.map((p) => (
             <div
               key={p.sku}
               className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"

@@ -40,11 +40,11 @@ export default function HomePage() {
                 color: "bg-green-50 border-green-200 hover:border-brand-green",
               },
               {
-                icon: "🦴",
-                title: "آلام المفاصل والركب",
-                sub: "التصلب والالتهابات اليومية",
-                cta: "الحل: جل المفاصل",
-                href: "/products/joint-relief-gel",
+                icon: "🦵",
+                title: "ألم الركبة والمفاصل",
+                sub: "الخشونة والتيبّس وصعوبة الحركة",
+                cta: "الحل: جهاز الركبة",
+                href: "/products/knee-joint-massager",
                 color: "bg-amber-50 border-amber-200 hover:border-brand-gold",
               },
             ].map((card) => (

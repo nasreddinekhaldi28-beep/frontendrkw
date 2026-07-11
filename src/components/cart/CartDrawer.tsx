@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/lib/cart-store";
 import { useCheckoutStore } from "@/lib/checkout-store";
-import { products } from "@/lib/products";
+import { getCrossSells } from "@/lib/products";
 import { formatKWD, cn } from "@/lib/utils";
 import { trackInitiateCheckout } from "@/lib/pixels";
 import CartItem from "./CartItem";
@@ -16,8 +16,8 @@ export default function CartDrawer() {
   const sub = subtotal();
   const cartSkus = items.map((i) => i.sku);
 
-  // Cross-sells: products NOT in cart
-  const crossSells = products.filter((p) => !cartSkus.includes(p.sku));
+  // Cross-sells: cheap different-problem add-ons first, capped for a clean drawer
+  const crossSells = getCrossSells(cartSkus, 3);
 
   function handleCheckout() {
     trackInitiateCheckout(sub, cartSkus);

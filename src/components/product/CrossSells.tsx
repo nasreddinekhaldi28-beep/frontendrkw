@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
-import { products } from "@/lib/products";
+import { getCrossSells } from "@/lib/products";
 import { formatKWD } from "@/lib/utils";
 import { trackAddToCart } from "@/lib/pixels";
 import StarRating from "@/components/ui/StarRating";
@@ -11,7 +11,7 @@ import type { Product } from "@/types";
 
 export default function CrossSells({ currentProduct }: { currentProduct: Product }) {
   const { addItem, openDrawer } = useCartStore();
-  const others = products.filter((p) => p.sku !== currentProduct.sku);
+  const others = getCrossSells([currentProduct.sku], 4);
 
   function handleAdd(p: Product) {
     addItem({

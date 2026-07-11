@@ -27,6 +27,7 @@ export interface Product {
   reviews: Review[];
   faqs: FAQ[];
   badge?: string;
+  role?: "hero" | "addon"; // hero = ad destination / featured; addon = cross-sell & upsell
 }
 
 export interface MechanismStep {

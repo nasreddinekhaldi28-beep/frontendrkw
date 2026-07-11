@@ -5,7 +5,122 @@ const placeholderImg = (label: string, color = "1E3A8A") =>
 
 export const products: Product[] = [
   // ──────────────────────────────────────────────────────────────────────────
-  // 1. Cupping Therapy Massager
+  // HERO 1 — Knee Joint Massager (FLAGSHIP — highest perceived value)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    sku: "knee-joint-massager",
+    slug: "knee-joint-massager",
+    nameAr: "جهاز مساج الركبة بالضوء الأحمر والحرارة",
+    taglineAr: "ألم الركبة يسرق حركتك — استرجعها في ١٥ دقيقة",
+    descriptionAr:
+      "جهاز علاج الركبة المتطور يجمع بين الحرارة العلاجية والضوء الأحمر (660nm) والمساج الاهتزازي في جهاز واحد — يخفف ألم المفاصل والتيبّس ويحسّن الحركة من راحة بيتك، بدون حبوب وبدون عيادات. مصمم بالتعاون مع أخصائيي العلاج الطبيعي.",
+    image: placeholderImg("مساج الركبة", "1E3A8A"),
+    images: [
+      placeholderImg("مساج الركبة", "1E3A8A"),
+      placeholderImg("على الركبة", "2D4ED8"),
+      placeholderImg("الضوء الأحمر", "DC2626"),
+      placeholderImg("حرارة + اهتزاز", "D97706"),
+    ],
+    basePrice: 34.9,
+    otoPrice: 29.66, // 15% off
+    offers: [
+      { qty: 1, label: "قطعة واحدة", unitPrice: 34.9, lineTotal: 34.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين (لك ولشريكك)", unitPrice: 31.41, lineTotal: 62.82, savePercent: 10, badge: "الأكثر مبيعاً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 27.92, lineTotal: 83.76, savePercent: 20, badge: "أفضل قيمة" },
+    ],
+    category: "أجهزة العلاج",
+    painPoints: [
+      "ألم في الركبة عند صعود ونزول الدرج",
+      "تيبّس وطقطقة في المفصل خاصة الصباح",
+      "خشونة وآلام الركبة مع التقدم في العمر",
+      "تورّم بعد المشي أو الوقوف الطويل",
+      "مسكّنات تخفي الألم ولا تعالج السبب",
+      "جلسات العلاج الطبيعي مكلفة ومتعبة",
+    ],
+    benefits: [
+      "راحة محسوسة خلال ١٥ دقيقة يومياً",
+      "حرارة + ضوء أحمر + مساج في جهاز واحد",
+      "يحسّن الدورة الدموية ويقلّل التيبّس والتورّم",
+      "لاسلكي بالكامل — استخدمه وأنت تشاهد التلفاز",
+      "مقاسات قابلة للتعديل تناسب كل الأحجام",
+      "هدية مثالية للوالدين — بدون حبوب ولا آثار جانبية",
+    ],
+    mechanism: [
+      {
+        icon: "🌡️",
+        titleAr: "الحرارة العلاجية",
+        descAr: "حرارة لطيفة قابلة للتحكم ترفع تدفق الدم للمفصل حتى 40% — تغذّي الغضروف، تقلّل التيبّس وتخفف إحساس الاحتكاك داخل الركبة.",
+      },
+      {
+        icon: "🔴",
+        titleAr: "الضوء الأحمر 660nm",
+        descAr: "أمواج الضوء الأحمر تخترق الأنسجة بعمق لتحفيز تجدد الخلايا وتقليل الالتهاب — نفس التقنية المستخدمة في عيادات الفيزيوثيرابي.",
+      },
+      {
+        icon: "💆",
+        titleAr: "المساج الاهتزازي الذكي",
+        descAr: "أنماط اهتزاز متدرّجة صمّمها أخصائيو العلاج الطبيعي لإرخاء العضلات حول المفصل وقطع إشارات الألم.",
+      },
+      {
+        icon: "🔋",
+        titleAr: "لاسلكي وقابل للشحن",
+        descAr: "بطارية تدوم لساعات وشحن USB-C. جلسة تلقائية 15 دقيقة مع إيقاف ذاتي للأمان.",
+      },
+    ],
+    reviews: [
+      {
+        nameAr: "أبو عبدالعزيز",
+        locationAr: "الجهراء، الكويت",
+        rating: 5,
+        textAr: "عمري ٥٨ سنة وركبتي كانت تعذبني بالدرج. بعد أسبوعين استخدام يومي صرت أنزل الدرج بدون ما أمسك الجدار. الله يعطيهم العافية.",
+        date: "يونيو 2026",
+      },
+      {
+        nameAr: "منيرة العنزي",
+        locationAr: "السالمية، الكويت",
+        rating: 5,
+        textAr: "اشتريته لأمي عندها خشونة بالركبة. تستخدمه كل ليلة وتقول التورم قل والنوم صار أريح. أخذنا ٢ عشان ركبتيها الثنتين.",
+        date: "مايو 2026",
+      },
+      {
+        nameAr: "يوسف الفضلي",
+        locationAr: "حولي، الكويت",
+        rating: 5,
+        textAr: "ألعب كرة والركبة دايماً تتعبني بعد المباراة. الحرارة والاهتزاز يريحونها بشكل خرافي. يستاهل كل فلس.",
+        date: "يونيو 2026",
+      },
+      {
+        nameAr: "أم فهد",
+        locationAr: "الأحمدي، الكويت",
+        rating: 4,
+        textAr: "جودة ممتازة والتوصيل جاء خلال يومين والدفع عند الاستلام. الجهاز مريح والحرارة تحس فيها من أول مرة.",
+        date: "يوليو 2026",
+      },
+    ],
+    faqs: [
+      {
+        questionAr: "هل ينفع لخشونة الركبة والتقدم في العمر؟",
+        answerAr: "نعم، الحرارة والضوء الأحمر يساعدان على تقليل التيبّس والالتهاب وتحسين الحركة، وهو مناسب جداً لكبار السن والخشونة.",
+      },
+      {
+        questionAr: "كم جلسة أحتاج في اليوم؟",
+        answerAr: "يُنصح بجلسة واحدة ١٥ دقيقة يومياً لكل ركبة. أغلب العملاء يحسّون بفرق خلال أول أسبوع إلى أسبوعين.",
+      },
+      {
+        questionAr: "هل يناسب كل مقاسات الركبة؟",
+        answerAr: "نعم، الأحزمة قابلة للتعديل وتناسب معظم المقاسات بشكل مريح.",
+      },
+      {
+        questionAr: "هل يمكن استخدامه على الكتف أو الكوع؟",
+        answerAr: "نعم، بفضل الأحزمة المرنة يمكن استخدامه على الكتف والكوع والفخذ لأي ألم مفصلي.",
+      },
+    ],
+    badge: "الأقوى — الأكثر طلباً",
+    role: "hero",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // HERO 2 — Cupping Therapy Massager
   // ──────────────────────────────────────────────────────────────────────────
   {
     sku: "cupping-therapy-massager",
@@ -114,10 +229,11 @@ export const products: Product[] = [
       },
     ],
     badge: "الأكثر مبيعاً",
+    role: "hero",
   },
 
   // ──────────────────────────────────────────────────────────────────────────
-  // 2. Foot Massager
+  // HERO 3 — Foot Massager
   // ──────────────────────────────────────────────────────────────────────────
   {
     sku: "foot-massager",
@@ -214,11 +330,12 @@ export const products: Product[] = [
         answerAr: "يُنصح باستشارة الطبيب أولاً لمرضى السكري أو من لديهم مشاكل في الأعصاب.",
       },
     ],
-    badge: "م ideal للهدايا",
+    badge: "مثالي للهدايا",
+    role: "hero",
   },
 
   // ──────────────────────────────────────────────────────────────────────────
-  // 3. Joint Treatment Gel
+  // ADD-ON 1 — Joint Treatment Gel (best upsell — cheap, high impulse)
   // ──────────────────────────────────────────────────────────────────────────
   {
     sku: "joint-relief-gel",
@@ -234,12 +351,12 @@ export const products: Product[] = [
       placeholderImg("على الركبة", "10B981"),
       placeholderImg("نتيجة سريعة", "1E3A8A"),
     ],
-    basePrice: 9.9,
-    otoPrice: 8.41,
+    basePrice: 8.9,
+    otoPrice: 5.34, // deep OTO discount (~40%) — cheap add-on, boosts attach rate
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 9.9, lineTotal: 9.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 8.91, lineTotal: 17.82, savePercent: 10, badge: "الأكثر طلباً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 7.92, lineTotal: 23.76, savePercent: 20, badge: "عرض العائلة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 8.9, lineTotal: 8.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 8.01, lineTotal: 16.02, savePercent: 10, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 7.12, lineTotal: 21.36, savePercent: 20, badge: "عرض العائلة" },
     ],
     category: "العناية الطبيعية",
     painPoints: [
@@ -275,7 +392,7 @@ export const products: Product[] = [
       {
         icon: "🤝",
         titleAr: "أقوى مع الجهاز",
-        descAr: "استخدامه قبل جلسة الحجامة أو مساج الأقدام يضاعف فاعلية العلاج.",
+        descAr: "استخدامه قبل جلسة الحجامة أو مساج الأقدام أو الركبة يضاعف فاعلية العلاج.",
       },
     ],
     reviews: [
@@ -283,7 +400,7 @@ export const products: Product[] = [
         nameAr: "خالد البراك",
         locationAr: "الفروانية، الكويت",
         rating: 5,
-        textAr: "ركبتي كانت تؤلمني كل يوم. مع جهاز الحجامة والجل سوياً، الألم خف بشكل ملحوظ خلال أسبوعين.",
+        textAr: "ركبتي كانت تؤلمني كل يوم. مع جهاز الركبة والجل سوياً، الألم خف بشكل ملحوظ خلال أسبوعين.",
         date: "يونيو 2026",
       },
       {
@@ -309,22 +426,296 @@ export const products: Product[] = [
       },
     ],
     badge: "مكمل مثالي",
+    role: "addon",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // ADD-ON 2 — Back Support Belt (different problem: lower back)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    sku: "back-support-belt",
+    slug: "back-support-belt",
+    nameAr: "حزام دعم الظهر الطبي",
+    taglineAr: "سند لظهرك طوال اليوم — وقفة أصح وألم أقل",
+    descriptionAr:
+      "حزام طبي مريح يسند أسفل الظهر ويوزّع الضغط بالتساوي أثناء الجلوس أو الوقوف أو رفع الأشياء — يقلّل آلام أسفل الظهر ويحسّن وقفتك على مدار اليوم.",
+    image: placeholderImg("حزام الظهر", "7C3AED"),
+    images: [
+      placeholderImg("حزام الظهر", "7C3AED"),
+      placeholderImg("سند أسفل الظهر", "6D28D9"),
+      placeholderImg("قابل للتعديل", "2D4ED8"),
+      placeholderImg("تحت الملابس", "1E3A8A"),
+    ],
+    basePrice: 11.9,
+    otoPrice: 10.12, // 15% off
+    offers: [
+      { qty: 1, label: "قطعة واحدة", unitPrice: 11.9, lineTotal: 11.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 10.71, lineTotal: 21.42, savePercent: 10, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 9.52, lineTotal: 28.56, savePercent: 20, badge: "أفضل قيمة" },
+    ],
+    category: "أجهزة العلاج",
+    painPoints: [
+      "ألم أسفل الظهر من الجلوس أو الوقوف الطويل",
+      "إجهاد الظهر عند رفع الأشياء الثقيلة",
+      "وقفة منحنية تزيد الألم مع الوقت",
+      "شد وتعب في منطقة الحوض والفقرات",
+    ],
+    benefits: [
+      "سند فوري لأسفل الظهر يخفف الضغط",
+      "يشجّع على وقفة صحيحة تلقائياً",
+      "قماش مريح يتنفّس — يُلبس تحت الملابس",
+      "مقاس قابل للتعديل يناسب الجميع",
+    ],
+    mechanism: [
+      {
+        icon: "🎯",
+        titleAr: "دعم مستهدف للفقرات",
+        descAr: "دعامات مرنة تسند أسفل الظهر وتوزّع الحِمل بعيداً عن الفقرات المتعبة.",
+      },
+      {
+        icon: "🧍",
+        titleAr: "تصحيح الوقفة",
+        descAr: "يذكّر جسمك بالوقفة الصحيحة ويقلّل الانحناء الذي يسبب الألم المزمن.",
+      },
+      {
+        icon: "🌬️",
+        titleAr: "قماش مريح متنفّس",
+        descAr: "خامة خفيفة لا تسبب التعرّق، مريحة للبس الطويل في الشغل أو السواقة.",
+      },
+    ],
+    reviews: [
+      {
+        nameAr: "بدر العجمي",
+        locationAr: "الأحمدي، الكويت",
+        rating: 5,
+        textAr: "أشتغل ساعات طويلة وقوف. الحزام خفّف ألم ظهري بشكل واضح وأقدر ألبسه تحت الدشداشة بدون ما يبين.",
+        date: "يونيو 2026",
+      },
+      {
+        nameAr: "أم يعقوب",
+        locationAr: "الفروانية، الكويت",
+        rating: 5,
+        textAr: "استخدمه مع جهاز الحجامة، صار ظهري أرتاح بكثير. مريح وسهل التعديل.",
+        date: "مايو 2026",
+      },
+    ],
+    faqs: [
+      {
+        questionAr: "هل يمكن لبسه طوال اليوم؟",
+        answerAr: "يُنصح بلبسه ٢-٤ ساعات في أوقات الجهد أو الجلوس الطويل، وليس أثناء النوم.",
+      },
+      {
+        questionAr: "هل يناسب كل المقاسات؟",
+        answerAr: "نعم، الحزام قابل للتعديل ويناسب معظم المقاسات بشكل مريح.",
+      },
+    ],
+    badge: "سند لظهرك",
+    role: "addon",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // ADD-ON 3 — Smart Posture Corrector (different problem: neck/upper back)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    sku: "posture-corrector",
+    slug: "posture-corrector",
+    nameAr: "مصحّح الوضعية الذكي للظهر والكتفين",
+    taglineAr: "وقفة واثقة وظهر مستقيم — بدون ما تفكّر",
+    descriptionAr:
+      "مصحّح وضعية مريح يسحب كتفيك للخلف بلطف ويعيد ظهرك لوضعه الطبيعي — يخفف ألم الرقبة وأعلى الظهر الناتج عن الجوال والمكتب، ويمنحك وقفة أكثر ثقة.",
+    image: placeholderImg("مصحح الوضعية", "0891B2"),
+    images: [
+      placeholderImg("مصحح الوضعية", "0891B2"),
+      placeholderImg("كتفين للخلف", "0E7490"),
+      placeholderImg("خفيف ومخفي", "2D4ED8"),
+      placeholderImg("وقفة واثقة", "1E3A8A"),
+    ],
+    basePrice: 14.9,
+    otoPrice: 12.67, // 15% off
+    offers: [
+      { qty: 1, label: "قطعة واحدة", unitPrice: 14.9, lineTotal: 14.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 13.41, lineTotal: 26.82, savePercent: 10, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 11.92, lineTotal: 35.76, savePercent: 20, badge: "أفضل قيمة" },
+    ],
+    category: "أجهزة العلاج",
+    painPoints: [
+      "انحناء الظهر والكتفين من الجوال والكمبيوتر",
+      "ألم في الرقبة وأعلى الظهر",
+      "وقفة منحنية تؤثر على مظهرك وثقتك",
+      "شد مستمر بين لوحي الكتف",
+    ],
+    benefits: [
+      "يسحب الكتفين للخلف بلطف طوال اليوم",
+      "يخفف ألم الرقبة وأعلى الظهر",
+      "خفيف ومخفي تحت الملابس",
+      "مقاس قابل للتعديل للرجال والنساء",
+    ],
+    mechanism: [
+      {
+        icon: "🎯",
+        titleAr: "محاذاة الكتفين",
+        descAr: "يعيد الكتفين لوضعهما الطبيعي ويقلّل الضغط على الرقبة والفقرات العلوية.",
+      },
+      {
+        icon: "🧠",
+        titleAr: "إعادة تدريب العضلات",
+        descAr: "الاستخدام المنتظم يدرّب عضلات ظهرك على الوقفة الصحيحة حتى بدون الجهاز.",
+      },
+      {
+        icon: "👕",
+        titleAr: "خفيف ومريح",
+        descAr: "تصميم رفيع يُلبس تحت الملابس بدون أن يظهر أو يزعج.",
+      },
+    ],
+    reviews: [
+      {
+        nameAr: "عبدالله السالم",
+        locationAr: "السالمية، الكويت",
+        rating: 5,
+        textAr: "أجلس أمام الكمبيوتر ساعات وظهري صار منحني. بعد أسبوع استخدام حسيت رقبتي أرتاح ووقفتي تحسنت.",
+        date: "يونيو 2026",
+      },
+      {
+        nameAr: "دلال المطيري",
+        locationAr: "حولي، الكويت",
+        rating: 4,
+        textAr: "مريح وما يبين تحت العباية. يذكّرني أعدّل وقفتي طول الوقت.",
+        date: "مايو 2026",
+      },
+    ],
+    faqs: [
+      {
+        questionAr: "كم مدة استخدامه يومياً؟",
+        answerAr: "ابدأ بـ ٣٠ دقيقة يومياً وزِد تدريجياً حتى ٢-٣ ساعات مع تعوّد جسمك.",
+      },
+      {
+        questionAr: "هل يناسب الرجال والنساء؟",
+        answerAr: "نعم، المقاس قابل للتعديل ويناسب الجميع.",
+      },
+    ],
+    badge: "وقفة أصح",
+    role: "addon",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // ADD-ON 4 — Neck & Shoulder Mini Massager (different problem: neck tension)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    sku: "neck-shoulder-massager",
+    slug: "neck-shoulder-massager",
+    nameAr: "جهاز مساج الرقبة والكتف المصغّر",
+    taglineAr: "شيل تعب الرقبة في أي وقت وأي مكان",
+    descriptionAr:
+      "جهاز مساج مصغّر بالنبضات الكهربائية والحرارة يستهدف شد الرقبة والكتف — صغير يدخل الجيب، تستخدمه في المكتب أو السيارة أو البيت لراحة فورية من التوتر العضلي.",
+    image: placeholderImg("مساج الرقبة", "BE185D"),
+    images: [
+      placeholderImg("مساج الرقبة", "BE185D"),
+      placeholderImg("نبضات + حرارة", "DB2777"),
+      placeholderImg("صغير ومحمول", "2D4ED8"),
+      placeholderImg("في المكتب", "1E3A8A"),
+    ],
+    basePrice: 12.9,
+    otoPrice: 10.97, // 15% off
+    offers: [
+      { qty: 1, label: "قطعة واحدة", unitPrice: 12.9, lineTotal: 12.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 11.61, lineTotal: 23.22, savePercent: 10, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 10.32, lineTotal: 30.96, savePercent: 20, badge: "أفضل قيمة" },
+    ],
+    category: "أجهزة العلاج",
+    painPoints: [
+      "شد وتصلب في الرقبة من الجوال والمكتب",
+      "توتر بين الرقبة والكتف آخر اليوم",
+      "صداع ناتج عن شد عضلات الرقبة",
+      "ما عندك وقت لجلسة مساج كاملة",
+    ],
+    benefits: [
+      "راحة فورية للرقبة خلال دقائق",
+      "نبضات كهربائية + حرارة لإرخاء العضلات",
+      "صغير ومحمول — استخدمه بأي مكان",
+      "قابل للشحن USB وسهل الاستخدام",
+    ],
+    mechanism: [
+      {
+        icon: "⚡",
+        titleAr: "نبضات TENS",
+        descAr: "نبضات كهربائية لطيفة تحفّز العضلات وتقطع إشارات الألم في الرقبة والكتف.",
+      },
+      {
+        icon: "🌡️",
+        titleAr: "حرارة مريحة",
+        descAr: "حرارة خفيفة ترخي العضلات المشدودة وتزيد تدفق الدم للمنطقة.",
+      },
+      {
+        icon: "🎒",
+        titleAr: "محمول بالكامل",
+        descAr: "حجم صغير يدخل الجيب أو الشنطة — راحة في المكتب، السيارة، أو السفر.",
+      },
+    ],
+    reviews: [
+      {
+        nameAr: "هند العنزي",
+        locationAr: "الكويت، مدينة",
+        rating: 5,
+        textAr: "رقبتي دايماً مشدودة من الشغل على اللابتوب. الجهاز الصغير هذا صار ينقذني كل يوم بالمكتب.",
+        date: "يونيو 2026",
+      },
+      {
+        nameAr: "طلال الدوسري",
+        locationAr: "الجهراء، الكويت",
+        rating: 5,
+        textAr: "أخذته مع جهاز الحجامة. حجمه صغير بس قوي، الحرارة والنبضات يريحون الرقبة بسرعة.",
+        date: "مايو 2026",
+      },
+    ],
+    faqs: [
+      {
+        questionAr: "هل النبضات مؤلمة؟",
+        answerAr: "لا، تبدأ بمستوى خفيف جداً وتتحكم أنت في الشدة حسب راحتك.",
+      },
+      {
+        questionAr: "هل يعمل على الكتف والظهر أيضاً؟",
+        answerAr: "نعم، يمكن استخدامه على الكتف وأعلى الظهر لإرخاء العضلات المشدودة.",
+      },
+    ],
+    badge: "الأكثر طلباً",
+    role: "addon",
   },
 ];
 
 export const productsBySlug = Object.fromEntries(products.map((p) => [p.slug, p]));
 export const productsBySku = Object.fromEntries(products.map((p) => [p.sku, p]));
 
+export const heroProducts = products.filter((p) => p.role !== "addon");
+export const addonProducts = products.filter((p) => p.role === "addon");
+
+/**
+ * Cross-sells for cart & product pages.
+ * Prioritizes cheap different-problem ADD-ONS first (they lift AOV via impulse),
+ * then heroes. Excludes anything already in the cart.
+ */
+export function getCrossSells(cartSkus: string[], limit = 4): Product[] {
+  const rank = (p: Product) => (p.role === "addon" ? 0 : 1);
+  return products
+    .filter((p) => !cartSkus.includes(p.sku))
+    .sort((a, b) => rank(a) - rank(b))
+    .slice(0, limit);
+}
+
+/**
+ * One-Time-Offer (post-checkout upsell).
+ * Always tries to attach a cheap, high-impulse ADD-ON (different problem) at a
+ * discount — this is where AOV is won. Falls back to any hero not in cart.
+ */
 export function getOTOProduct(cartSkus: string[]): Product | null {
-  const has = (sku: string) => cartSkus.includes(sku);
-  if (has("cupping-therapy-massager") && !has("foot-massager")) {
-    return productsBySku["foot-massager"];
+  const otoPriority = [
+    "joint-relief-gel",
+    "neck-shoulder-massager",
+    "back-support-belt",
+    "posture-corrector",
+  ];
+  for (const sku of otoPriority) {
+    if (!cartSkus.includes(sku) && productsBySku[sku]) return productsBySku[sku];
   }
-  if (has("foot-massager") && !has("cupping-therapy-massager")) {
-    return productsBySku["cupping-therapy-massager"];
-  }
-  if (has("cupping-therapy-massager") && has("foot-massager")) {
-    return productsBySku["joint-relief-gel"];
-  }
-  return productsBySku["cupping-therapy-massager"];
+  const fallbackHero = products.find((p) => !cartSkus.includes(p.sku));
+  return fallbackHero ?? productsBySku["joint-relief-gel"] ?? null;
 }

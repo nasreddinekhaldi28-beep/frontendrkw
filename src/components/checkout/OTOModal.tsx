@@ -95,6 +95,9 @@ export default function OTOModal() {
   if (step !== "oto" || !otoProduct) return null;
 
   const progressPct = (timeLeft / OTO_SECONDS) * 100;
+  const discountPct = Math.round(
+    (1 - otoProduct.otoPrice / otoProduct.originalPrice) * 100
+  );
 
   return (
     <div className="fixed inset-0 bg-black/70 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 drawer-overlay">
@@ -152,7 +155,7 @@ export default function OTOModal() {
                   </span>
                 </div>
                 <span className="inline-block mt-1.5 bg-red-100 text-red-600 text-xs font-extrabold px-2.5 py-0.5 rounded-full">
-                  خصم 15% — توفر {formatKWD(otoProduct.originalPrice - otoProduct.otoPrice)}
+                  خصم {discountPct}% — توفر {formatKWD(otoProduct.originalPrice - otoProduct.otoPrice)}
                 </span>
               </div>
             </div>
