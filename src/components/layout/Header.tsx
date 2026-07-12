@@ -22,7 +22,7 @@ export default function Header() {
       {/* Trust bar */}
       <div className="bg-gradient-to-l from-brand-blue-dark via-brand-blue to-brand-blue-light text-white text-xs py-2 text-center tracking-wide">
         <span className="hidden sm:inline">⭐ 4.9/5 من 2,400+ عميل كويتي &nbsp;·&nbsp; </span>
-        🇰🇼 توصيل 1-2 يوم &nbsp;·&nbsp; 💵 الدفع عند الاستلام &nbsp;·&nbsp; ✅ ضمان 7 أيام
+        🇰🇼 توصيل 1-2 يوم &nbsp;·&nbsp; 💵 الدفع عند الاستلام &nbsp;·&nbsp; 🛡️ ضمان 30 يوم
       </div>
 
       {/* Main nav */}

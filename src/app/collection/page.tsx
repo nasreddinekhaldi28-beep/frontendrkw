@@ -19,7 +19,7 @@ export default function CollectionPage() {
         <h1 className="text-3xl font-extrabold mb-2">متجرنا الكامل</h1>
         <p className="text-blue-100">علاج احترافي في بيتك — الدفع عند الاستلام</p>
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm">
-          {["🇰🇼 توصيل 1-2 يوم", "💵 الدفع عند الاستلام", "✅ ضمان 7 أيام"].map((b) => (
+          {["🇰🇼 توصيل 1-2 يوم", "💵 الدفع عند الاستلام", "🛡️ ضمان 30 يوم"].map((b) => (
             <span key={b} className="bg-white/10 ring-1 ring-white/15 backdrop-blur-sm px-4 py-1.5 rounded-full">{b}</span>
           ))}
         </div>

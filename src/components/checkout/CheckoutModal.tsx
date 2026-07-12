@@ -99,7 +99,7 @@ export default function CheckoutModal() {
             <div className="grid grid-cols-3 gap-2">
               {[
                 { icon: Truck, label: "توصيل 1-2 يوم" },
-                { icon: ShieldCheck, label: "ضمان 7 أيام" },
+                { icon: ShieldCheck, label: "ضمان 30 يوم" },
                 { icon: Clock, label: "الدفع عند الاستلام" },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex flex-col items-center gap-1 bg-blue-50 rounded-xl p-2 ring-1 ring-brand-blue/5">

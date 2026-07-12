@@ -25,7 +25,7 @@ export default function Footer() {
               أجهزة العلاج المنزلي #1 في الكويت. علاج احترافي للركبة والظهر والأقدام والمفاصل — بدون عيادات وبدون دفع مسبق.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
-              {["💵 الدفع عند الاستلام", "🇰🇼 توصيل 1-2 يوم", "✅ ضمان 7 أيام"].map((b) => (
+              {["💵 الدفع عند الاستلام", "🇰🇼 توصيل 1-2 يوم", "🛡️ ضمان 30 يوم"].map((b) => (
                 <span key={b} className="bg-white/10 ring-1 ring-white/10 px-3 py-1 rounded-full backdrop-blur-sm hover:bg-white/15 transition-colors">{b}</span>
               ))}
             </div>

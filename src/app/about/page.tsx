@@ -75,7 +75,7 @@ export default function AboutPage() {
             {[
               { num: "2,400+", label: "عميل راضٍ" },
               { num: "4.9/5", label: "متوسط التقييم" },
-              { num: "7 أيام", label: "ضمان استرجاع" },
+              { num: "30 يوم", label: "ضمان استرجاع ذهبي" },
               { num: "1-2 يوم", label: "سرعة التوصيل" },
             ].map((s) => (
               <div key={s.label} className="bg-white/10 ring-1 ring-white/10 rounded-xl p-4 hover:bg-white/15 transition-colors">

@@ -171,7 +171,7 @@ export default function ProductHero({ product }: Props) {
 
             {/* Scarcity */}
             <p className="text-xs font-bold text-red-500 flex items-center gap-1.5 -mt-1">
-              🔥 طلب مرتفع اليوم — اطلب الآن لضمان الحصول عليه
+              🔥 طلب عالٍ اليوم — متبقي 8 قطع فقط من الدفعة الحالية
             </p>
 
             {/* Main CTA — id used by StickyAddToCart IntersectionObserver */}

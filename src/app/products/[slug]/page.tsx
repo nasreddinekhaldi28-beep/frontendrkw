@@ -10,6 +10,7 @@ import ResultsTimeline from "@/components/product/ResultsTimeline";
 import GuaranteeSection from "@/components/product/GuaranteeSection";
 import ReviewsSection from "@/components/product/ReviewsSection";
 import FAQSection from "@/components/product/FAQSection";
+import AfterOrderSection from "@/components/product/AfterOrderSection";
 import CrossSells from "@/components/product/CrossSells";
 import ViewContentTracker from "./ViewContentTracker";
 
@@ -61,6 +62,7 @@ export default function ProductPage({ params }: Props) {
       <GuaranteeSection />
       <ReviewsSection product={product} />
       <FAQSection product={product} />
+      <AfterOrderSection />
       <CrossSells currentProduct={product} />
     </>
   );

@@ -129,7 +129,7 @@ export default function ThankYouPage() {
         <div className="bg-gradient-to-l from-brand-blue-dark to-brand-blue text-white rounded-2xl p-6 mb-6 text-center shadow-card">
           <p className="text-xl font-extrabold mb-2">طلبك في أمان تام ✅</p>
           <p className="text-blue-100 text-sm leading-relaxed">
-            لا تقلق — لا دفع إلا عند الاستلام. وإذا ما عجبك المنتج خلال 7 أيام، نرجع لك فلوسك كاملة بدون أسئلة.
+            لا تقلق — لا دفع إلا عند الاستلام. وإذا ما عجبك المنتج خلال 30 يوم، نرجع لك فلوسك كاملة بدون أسئلة.
           </p>
         </div>
 

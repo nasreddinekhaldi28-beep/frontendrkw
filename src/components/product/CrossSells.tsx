@@ -36,7 +36,7 @@ export default function CrossSells({ currentProduct }: { currentProduct: Product
           <h2 className="text-2xl font-extrabold text-gray-900 mt-3">
             عملاؤنا يشترون هذا معه أيضاً
           </h2>
-          <p className="text-gray-500 mt-2">نفس التوصيل — وفر وقتك</p>
+          <p className="text-gray-500 mt-2">نفس التوصيل — أو اذكره عند مكالمة التأكيد لإضافته قبل التغليف</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
