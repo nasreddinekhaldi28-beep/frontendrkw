@@ -1,4 +1,3 @@
-import { CheckCircle2 } from "lucide-react";
 import type { Product } from "@/types";
 
 export default function PainMirror({ product }: { product: Product }) {
@@ -12,13 +11,21 @@ export default function PainMirror({ product }: { product: Product }) {
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mt-3">
             هل تعاني من هذه المشاكل؟
           </h2>
-          <p className="text-gray-500 mt-2">إذا قلت "نعم" على واحدة من هذه — هذا المنتج صُمّم لك</p>
+          <p className="text-gray-500 mt-2">
+            إذا قلت &quot;نعم&quot; على واحدة منها — هذا المنتج صُمّم لك
+          </p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-card border border-gray-100 divide-y divide-gray-100 overflow-hidden">
           {product.painPoints.map((point, i) => (
-            <div key={i} className="flex items-start gap-4 px-6 py-4 hover:bg-red-50/40 transition-colors">
-              <CheckCircle2 className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" />
+            <div
+              key={i}
+              className="flex items-start gap-4 px-6 py-4 hover:bg-red-50/40 transition-colors"
+            >
+              {/* Red ✗ — pain points should feel like suffering, not achievement */}
+              <span className="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full bg-red-100 text-red-500 text-sm font-extrabold flex items-center justify-center">
+                ✗
+              </span>
               <p className="text-gray-700 font-medium leading-relaxed">{point}</p>
             </div>
           ))}
