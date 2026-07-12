@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const productLinks = [
-  { href: "/products/cupping-therapy-massager", label: "جهاز الحجامة الكهربائي" },
-  { href: "/products/foot-massager", label: "جهاز مساج الأقدام" },
-  { href: "/products/joint-relief-gel", label: "جل علاج المفاصل" },
-  { href: "/collection", label: "جميع المنتجات" },
-];
+import { heroProducts, addonProducts } from "@/lib/products";
 
 const infoLinks = [
   { href: "/about", label: "من نحن" },
@@ -28,7 +22,7 @@ export default function Footer() {
               <p className="text-xs text-blue-200 tracking-widest mt-0.5">Rahat Kuwait</p>
             </div>
             <p className="text-blue-100 text-sm leading-relaxed">
-              أجهزة العلاج المنزلي #1 في الكويت. علاج احترافي للظهر والأقدام والمفاصل — بدون عيادات وبدون دفع مسبق.
+              أجهزة العلاج المنزلي #1 في الكويت. علاج احترافي للركبة والظهر والأقدام والمفاصل — بدون عيادات وبدون دفع مسبق.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
               {["💵 الدفع عند الاستلام", "🇰🇼 توصيل 1-2 يوم", "✅ ضمان 7 أيام"].map((b) => (
@@ -40,14 +34,49 @@ export default function Footer() {
           {/* Products */}
           <div>
             <h3 className="font-bold text-base mb-4 text-white">منتجاتنا</h3>
-            <ul className="space-y-2">
-              {productLinks.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="inline-block text-blue-100 hover:text-white text-sm hover:translate-x-[-3px] transition-all">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-4">
+              <li>
+                <p className="text-[11px] font-bold uppercase tracking-wider text-blue-300 mb-2">
+                  الأجهزة الرئيسية
+                </p>
+                <ul className="space-y-2">
+                  {heroProducts.map((p) => (
+                    <li key={p.sku}>
+                      <Link
+                        href={`/products/${p.slug}`}
+                        className="inline-block text-blue-100 hover:text-white text-sm hover:translate-x-[-3px] transition-all"
+                      >
+                        {p.nameAr}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              <li>
+                <p className="text-[11px] font-bold uppercase tracking-wider text-blue-300 mb-2">
+                  مكملات الراحة
+                </p>
+                <ul className="space-y-2">
+                  {addonProducts.map((p) => (
+                    <li key={p.sku}>
+                      <Link
+                        href={`/products/${p.slug}`}
+                        className="inline-block text-blue-100 hover:text-white text-sm hover:translate-x-[-3px] transition-all"
+                      >
+                        {p.nameAr}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              <li>
+                <Link
+                  href="/collection"
+                  className="inline-block text-brand-gold-light hover:text-white text-sm font-bold hover:translate-x-[-3px] transition-all"
+                >
+                  جميع المنتجات ←
+                </Link>
+              </li>
             </ul>
           </div>
 

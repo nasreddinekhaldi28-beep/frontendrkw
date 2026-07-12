@@ -8,6 +8,7 @@ interface CartStore {
   isDrawerOpen: boolean;
   addItem: (item: CartItem) => void;
   removeItem: (sku: string) => void;
+  updateQuantity: (sku: string, qty: number, unitPrice: number) => void;
   clearCart: () => void;
   openDrawer: () => void;
   closeDrawer: () => void;
@@ -38,6 +39,15 @@ export const useCartStore = create<CartStore>()(
 
       removeItem: (sku) =>
         set((state) => ({ items: state.items.filter((i) => i.sku !== sku) })),
+
+      updateQuantity: (sku, qty, unitPrice) =>
+        set((state) => ({
+          items: state.items.map((i) =>
+            i.sku === sku
+              ? { ...i, quantity: qty, unitPrice, lineTotal: parseFloat((unitPrice * qty).toFixed(3)) }
+              : i
+          ),
+        })),
 
       clearCart: () => set({ items: [] }),
 
