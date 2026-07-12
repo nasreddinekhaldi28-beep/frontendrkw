@@ -21,12 +21,12 @@ export const products: Product[] = [
       placeholderImg("الضوء الأحمر", "DC2626"),
       placeholderImg("حرارة + اهتزاز", "D97706"),
     ],
-    basePrice: 34.9,
-    otoPrice: 29.66, // 15% off
+    basePrice: 29.9,
+    otoPrice: 25.4, // 15% off
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 34.9, lineTotal: 34.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين (لك ولشريكك)", unitPrice: 31.41, lineTotal: 62.82, savePercent: 10, badge: "الأكثر مبيعاً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 27.92, lineTotal: 83.76, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 29.9, lineTotal: 29.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين (لك ولشريكك)", unitPrice: 24.95, lineTotal: 49.9, savePercent: 17, badge: "الأكثر مبيعاً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 21.5, lineTotal: 64.5, savePercent: 28, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [
@@ -136,12 +136,12 @@ export const products: Product[] = [
       placeholderImg("الضوء الأحمر", "D97706"),
       placeholderImg("بدون سلك", "059669"),
     ],
-    basePrice: 19.9,
-    otoPrice: 16.91, // 15% off
+    basePrice: 17.9,
+    otoPrice: 15.2, // 15% off
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 19.9, lineTotal: 19.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 17.91, lineTotal: 35.82, savePercent: 10, badge: "الأكثر مبيعاً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 15.92, lineTotal: 47.76, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 17.9, lineTotal: 17.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 13.95, lineTotal: 27.9, savePercent: 22, badge: "الأكثر مبيعاً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 11.97, lineTotal: 35.9, savePercent: 33, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [
@@ -249,12 +249,12 @@ export const products: Product[] = [
       placeholderImg("الحرارة", "D97706"),
       placeholderImg("راحة تامة", "1E3A8A"),
     ],
-    basePrice: 21.9,
-    otoPrice: 18.61,
+    basePrice: 19.9,
+    otoPrice: 16.9,
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 21.9, lineTotal: 21.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 19.71, lineTotal: 39.42, savePercent: 10, badge: "هدية مثالية" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 17.52, lineTotal: 52.56, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 19.9, lineTotal: 19.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 15.95, lineTotal: 31.9, savePercent: 20, badge: "هدية مثالية" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 13.97, lineTotal: 41.9, savePercent: 30, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [
@@ -351,12 +351,12 @@ export const products: Product[] = [
       placeholderImg("على الركبة", "10B981"),
       placeholderImg("نتيجة سريعة", "1E3A8A"),
     ],
-    basePrice: 8.9,
-    otoPrice: 5.34, // deep OTO discount (~40%) — cheap add-on, boosts attach rate
+    basePrice: 6.9,
+    otoPrice: 3.9, // deep OTO discount (~43%) — cheap add-on, boosts attach rate
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 8.9, lineTotal: 8.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 8.01, lineTotal: 16.02, savePercent: 10, badge: "الأكثر طلباً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 7.12, lineTotal: 21.36, savePercent: 20, badge: "عرض العائلة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 6.9, lineTotal: 6.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 5.95, lineTotal: 11.9, savePercent: 14, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 4.97, lineTotal: 14.9, savePercent: 28, badge: "عرض العائلة" },
     ],
     category: "العناية الطبيعية",
     painPoints: [
@@ -446,12 +446,12 @@ export const products: Product[] = [
       placeholderImg("قابل للتعديل", "2D4ED8"),
       placeholderImg("تحت الملابس", "1E3A8A"),
     ],
-    basePrice: 11.9,
-    otoPrice: 10.12, // 15% off
+    basePrice: 7.9,
+    otoPrice: 4.9, // deep OTO discount (~38%)
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 11.9, lineTotal: 11.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 10.71, lineTotal: 21.42, savePercent: 10, badge: "الأكثر طلباً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 9.52, lineTotal: 28.56, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 7.9, lineTotal: 7.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 6.45, lineTotal: 12.9, savePercent: 18, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 5.63, lineTotal: 16.9, savePercent: 29, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [
@@ -530,12 +530,12 @@ export const products: Product[] = [
       placeholderImg("خفيف ومخفي", "2D4ED8"),
       placeholderImg("وقفة واثقة", "1E3A8A"),
     ],
-    basePrice: 14.9,
-    otoPrice: 12.67, // 15% off
+    basePrice: 9.9,
+    otoPrice: 5.9, // deep OTO discount (~40%)
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 14.9, lineTotal: 14.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 13.41, lineTotal: 26.82, savePercent: 10, badge: "الأكثر طلباً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 11.92, lineTotal: 35.76, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 9.9, lineTotal: 9.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 7.95, lineTotal: 15.9, savePercent: 20, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 6.97, lineTotal: 20.9, savePercent: 30, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [
@@ -614,12 +614,12 @@ export const products: Product[] = [
       placeholderImg("صغير ومحمول", "2D4ED8"),
       placeholderImg("في المكتب", "1E3A8A"),
     ],
-    basePrice: 12.9,
-    otoPrice: 10.97, // 15% off
+    basePrice: 8.9,
+    otoPrice: 4.9, // deep OTO discount (~45%)
     offers: [
-      { qty: 1, label: "قطعة واحدة", unitPrice: 12.9, lineTotal: 12.9, savePercent: 0 },
-      { qty: 2, label: "قطعتين", unitPrice: 11.61, lineTotal: 23.22, savePercent: 10, badge: "الأكثر طلباً" },
-      { qty: 3, label: "ثلاث قطع", unitPrice: 10.32, lineTotal: 30.96, savePercent: 20, badge: "أفضل قيمة" },
+      { qty: 1, label: "قطعة واحدة", unitPrice: 8.9, lineTotal: 8.9, savePercent: 0 },
+      { qty: 2, label: "قطعتين", unitPrice: 6.95, lineTotal: 13.9, savePercent: 22, badge: "الأكثر طلباً" },
+      { qty: 3, label: "ثلاث قطع", unitPrice: 5.97, lineTotal: 17.9, savePercent: 33, badge: "أفضل قيمة" },
     ],
     category: "أجهزة العلاج",
     painPoints: [

@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-4 mt-8 text-center">
             {[
               { label: "جلسة عيادة", price: "15-30 KWD", sub: "مرة واحدة", icon: "🏥", color: "bg-white/10" },
-              { label: "جهاز راحة الكويت", price: "19.9 KWD", sub: "مدى الحياة", icon: "⭐", color: "bg-brand-gold/20 border border-brand-gold" },
+              { label: "جهاز راحة الكويت", price: "17.9 KWD", sub: "مدى الحياة", icon: "⭐", color: "bg-brand-gold/20 border border-brand-gold" },
               { label: "المسكنات اليومية", price: "+5 KWD/شهر", sub: "بدون علاج حقيقي", icon: "💊", color: "bg-white/10" },
             ].map((item) => (
               <div key={item.label} className={`${item.color} rounded-2xl p-5`}>
