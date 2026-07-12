@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/lib/cart-store";
 import { useCheckoutStore } from "@/lib/checkout-store";
-import { getCrossSells } from "@/lib/products";
+import { getCrossSells, productsBySku } from "@/lib/products";
 import { formatKWD, cn } from "@/lib/utils";
 import { trackInitiateCheckout } from "@/lib/pixels";
 import CartItem from "./CartItem";
@@ -15,6 +15,13 @@ export default function CartDrawer() {
 
   const sub = subtotal();
   const cartSkus = items.map((i) => i.sku);
+
+  // Total saved vs full base prices (tier discounts + OTO discounts)
+  const totalSavings = items.reduce((sum, i) => {
+    const p = productsBySku[i.sku];
+    if (!p) return sum;
+    return sum + Math.max(0, p.basePrice * i.quantity - i.lineTotal);
+  }, 0);
 
   // Cross-sells: cheap different-problem add-ons first, capped for a clean drawer
   const crossSells = getCrossSells(cartSkus, 3);
@@ -126,6 +133,12 @@ export default function CartDrawer() {
 
             {/* Footer */}
             <div className="border-t bg-gray-50 px-5 py-5 space-y-4">
+              {totalSavings > 0.009 && (
+                <div className="flex items-center justify-between text-sm font-bold bg-green-50 border border-green-200 rounded-xl px-3 py-2">
+                  <span className="text-green-700">🎉 وفرت</span>
+                  <span className="text-green-700">{formatKWD(totalSavings)}</span>
+                </div>
+              )}
               <div className="flex items-center justify-between text-lg font-bold">
                 <span className="text-gray-700">الإجمالي</span>
                 <span className="text-brand-blue">{formatKWD(sub)}</span>

@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Phone, Truck, Package } from "lucide-react";
 import { formatKWD } from "@/lib/utils";
+import { addonProducts } from "@/lib/products";
 import { getStoredPurchaseEventId, trackPurchase } from "@/lib/pixels";
 
 interface OrderSummary {
@@ -133,7 +135,30 @@ export default function ThankYouPage() {
           </p>
         </div>
 
-        {/* Post-purchase cross-sell */}
+        {/* Post-purchase cross-sell — add during confirmation call (zero extra fulfillment) */}
+        <div className="bg-white rounded-2xl shadow-card border border-gray-100 p-6 mb-6">
+          <h2 className="font-extrabold text-gray-800 text-lg mb-1">أكمل راحتك — بدون رسوم توصيل إضافية</h2>
+          <p className="text-gray-500 text-sm mb-5">
+            تبي تضيف منتج لطلبك؟ <strong className="text-brand-blue">اذكره في مكالمة التأكيد</strong> ويُضاف لنفس الشحنة قبل التغليف.
+          </p>
+          <div className="space-y-3">
+            {addonProducts.slice(0, 3).map((p) => (
+              <div key={p.sku} className="flex items-center gap-3 bg-blue-50/60 rounded-xl p-3 ring-1 ring-brand-blue/5">
+                <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+                  <Image src={p.image} alt={p.nameAr} fill className="object-cover" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold text-gray-800 leading-tight truncate">{p.nameAr}</p>
+                  <p className="text-brand-blue font-extrabold text-sm mt-0.5">{formatKWD(p.basePrice)}</p>
+                </div>
+                <span className="flex-shrink-0 text-[10px] bg-brand-gold/15 text-brand-gold font-bold px-2 py-1 rounded-full">
+                  اذكره بالمكالمة
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="text-center">
           <p className="text-gray-500 text-sm mb-4">تريد إضافة منتج آخر؟ طلب جديد بنفس السهولة</p>
           <Link

@@ -94,6 +94,22 @@ export default function CartItem({ item }: Props) {
         )}
 
         <p className="text-brand-blue font-extrabold text-sm mt-1.5">{formatKWD(item.lineTotal)}</p>
+
+        {/* One-tap upgrade to the 2-piece tier — main AOV lever */}
+        {!isOTO && item.quantity === 1 && product && (() => {
+          const tier2 = product.offers.find((o) => o.qty === 2);
+          if (!tier2 || tier2.savePercent <= 0) return null;
+          return (
+            <button
+              onClick={() => updateQuantity(item.sku, 2, tier2.unitPrice)}
+              className="mt-2 w-full text-start bg-gradient-to-l from-green-50 to-emerald-50 border border-green-200 hover:border-green-400 rounded-lg px-2.5 py-1.5 transition-colors"
+            >
+              <span className="text-[11px] font-bold text-green-700 leading-tight block">
+                ⚡ أضف قطعة ثانية بخصم {tier2.savePercent}% — وفر {formatKWD(product.basePrice * 2 - tier2.lineTotal)}
+              </span>
+            </button>
+          );
+        })()}
       </div>
 
       {/* Remove */}

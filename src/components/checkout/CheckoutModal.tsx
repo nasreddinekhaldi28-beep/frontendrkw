@@ -33,6 +33,12 @@ export default function CheckoutModal() {
   const sub = subtotal();
   const cartSkus = items.map((i) => i.sku);
 
+  const totalSavings = items.reduce((sum, i) => {
+    const p = productsBySku[i.sku];
+    if (!p) return sum;
+    return sum + Math.max(0, p.basePrice * i.quantity - i.lineTotal);
+  }, 0);
+
   // Determine OTO product
   const otp = getOTOProduct(cartSkus);
   const otoProduct: OTOProduct | null = otp
@@ -89,10 +95,19 @@ export default function CheckoutModal() {
                   </span>
                 </div>
               ))}
+              {totalSavings > 0.009 && (
+                <div className="flex justify-between items-center text-xs font-bold text-green-700">
+                  <span>🎉 توفيرك من العروض</span>
+                  <span>−{formatKWD(totalSavings)}</span>
+                </div>
+              )}
               <div className="border-t pt-2 flex justify-between font-extrabold text-base">
                 <span>الإجمالي</span>
                 <span className="text-brand-blue">{formatKWD(sub)}</span>
               </div>
+              <p className="text-center text-[11px] text-gray-400 pt-0.5">
+                🚚 التوصيل مجاني — تدفع هذا المبلغ فقط عند الاستلام
+              </p>
             </div>
 
             {/* Trust badges */}

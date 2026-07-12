@@ -60,8 +60,15 @@ export default function FeaturedProducts() {
                 {/* Offer highlights */}
                 <div className="mt-3 space-y-1.5">
                   {p.offers.slice(0, 2).map((o) => (
-                    <div key={o.qty} className="flex justify-between text-xs text-gray-500">
-                      <span>{o.label}</span>
+                    <div key={o.qty} className="flex justify-between items-center text-xs text-gray-500">
+                      <span>
+                        {o.label}
+                        {o.savePercent > 0 && (
+                          <span className="ms-1.5 text-[10px] bg-green-100 text-green-700 font-bold px-1.5 py-0.5 rounded-full">
+                            −{o.savePercent}%
+                          </span>
+                        )}
+                      </span>
                       <span className="font-bold text-gray-700">{formatKWD(o.lineTotal)}</span>
                     </div>
                   ))}
