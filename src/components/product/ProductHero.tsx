@@ -19,7 +19,7 @@ const TRUST_GRID = [
 ];
 
 export default function ProductHero({ product }: Props) {
-  const [selectedOfferIdx, setSelectedOfferIdx] = useState(1);
+  const [selectedOfferIdx, setSelectedOfferIdx] = useState(0);
   const [mainImg, setMainImg] = useState(0);
   const { addItem, openDrawer } = useCartStore();
 
