@@ -23,11 +23,11 @@ const config: Config = {
         cairo: ["var(--font-cairo)", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px -12px rgba(30, 58, 138, 0.18)",
-        card: "0 1px 3px rgba(16, 24, 40, 0.06), 0 18px 40px -20px rgba(30, 58, 138, 0.28)",
-        "card-hover": "0 2px 6px rgba(16, 24, 40, 0.08), 0 28px 60px -24px rgba(30, 58, 138, 0.38)",
-        cta: "0 10px 24px -8px rgba(16, 185, 129, 0.5)",
-        "cta-hover": "0 16px 32px -10px rgba(16, 185, 129, 0.6)",
+        soft: "0 1px 2px rgba(16, 24, 40, 0.04), 0 10px 30px -14px rgba(30, 58, 138, 0.22)",
+        card: "0 2px 6px rgba(16, 24, 40, 0.05), 0 24px 52px -24px rgba(30, 58, 138, 0.32)",
+        "card-hover": "0 4px 12px rgba(16, 24, 40, 0.08), 0 38px 72px -28px rgba(30, 58, 138, 0.44)",
+        cta: "0 10px 26px -8px rgba(16, 185, 129, 0.5)",
+        "cta-hover": "0 18px 40px -12px rgba(16, 185, 129, 0.64)",
       },
       backgroundImage: {
         "grid-fade":

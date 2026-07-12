@@ -5,9 +5,9 @@ export default function HeroSection() {
   return (
     <section className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light text-white py-16 md:py-24 overflow-hidden relative">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 start-10 w-64 h-64 rounded-full bg-white blur-3xl" />
-        <div className="absolute bottom-10 end-20 w-96 h-96 rounded-full bg-brand-gold/40 blur-3xl" />
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-6 start-6 w-72 h-72 rounded-full bg-brand-blue-light blur-3xl animate-float-soft" />
+        <div className="absolute bottom-6 end-14 w-[26rem] h-[26rem] rounded-full bg-brand-gold/60 blur-3xl animate-float-soft [animation-delay:1.5s]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative">
