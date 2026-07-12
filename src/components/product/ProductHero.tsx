@@ -143,7 +143,7 @@ export default function ProductHero({ product }: Props) {
                         )}
                       </div>
                       <div>
-                        <span className="font-bold text-gray-800 text-sm">{o.label}</span>
+                        <span className="font-extrabold text-gray-900 text-base">{o.label}</span>
                         {o.badge && (
                           <span className="ms-2 text-[11px] bg-brand-gold text-white font-bold px-2 py-0.5 rounded-full">
                             {o.badge}
