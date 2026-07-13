@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { heroProducts, addonProducts } from "@/lib/products";
 
 const infoLinks = [
@@ -17,9 +18,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="mb-3">
-              <span className="text-2xl font-extrabold">راحة الكويت</span>
-              <p className="text-xs text-blue-200 tracking-widest mt-0.5">Rahat Kuwait</p>
+            <div className="mb-4 flex items-center gap-3">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-white/30 shadow-lg">
+                <Image
+                  src="/logo.png"
+                  alt="راحة الكويت"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <span className="text-2xl font-extrabold block">راحة الكويت</span>
+                <p className="text-xs text-blue-200 tracking-widest mt-0.5">Rahat Kuwait</p>
+              </div>
             </div>
             <p className="text-blue-100 text-sm leading-relaxed">
               أجهزة العلاج المنزلي #1 في الكويت. علاج احترافي للركبة والظهر والأقدام والمفاصل — بدون عيادات وبدون دفع مسبق.
@@ -96,7 +107,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-200">
-          <p>© {new Date().getFullYear()} راحة الكويت. جميع الحقوق محفوظة.</p>
+          <div className="flex items-center gap-2">
+            <div className="relative w-5 h-5 rounded-full overflow-hidden opacity-70">
+              <Image src="/logo.png" alt="" fill className="object-cover" />
+            </div>
+            <p>© {new Date().getFullYear()} راحة الكويت. جميع الحقوق محفوظة.</p>
+          </div>
           <p>rahatkwt.store</p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCartStore } from "@/lib/cart-store";
@@ -28,13 +29,24 @@ export default function Header() {
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight group">
-          <span className="text-xl font-extrabold text-brand-blue tracking-tight group-hover:text-brand-blue-light transition-colors">
-            راحة الكويت
-          </span>
-          <span className="text-[10px] text-gray-400 font-medium tracking-widest uppercase -mt-0.5">
-            Rahat Kuwait
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-brand-blue/20 group-hover:ring-brand-blue/40 transition-all shadow-soft">
+            <Image
+              src="/logo.png"
+              alt="راحة الكويت"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-extrabold text-brand-blue tracking-tight group-hover:text-brand-blue-light transition-colors">
+              راحة الكويت
+            </span>
+            <span className="text-[10px] text-gray-400 font-medium tracking-widest uppercase -mt-0.5">
+              Rahat Kuwait
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
