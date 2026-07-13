@@ -67,6 +67,7 @@ export default function OTOModal() {
         JSON.stringify({
           orderNumber: data.order_number,
           name: formData.name,
+          phone: formData.phone,
           total,
           items: payload.items,
           currency: "KWD",
