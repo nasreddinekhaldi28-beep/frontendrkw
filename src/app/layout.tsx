@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import CartDrawer from "@/components/cart/CartDrawer";
-import CheckoutModal from "@/components/checkout/CheckoutModal";
-import OTOModal from "@/components/checkout/OTOModal";
+import StoreShell from "@/components/layout/StoreShell";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -37,12 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ar" dir="rtl" className={cairo.variable}>
       <body className="font-cairo">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CartDrawer />
-        <CheckoutModal />
-        <OTOModal />
+        <StoreShell>{children}</StoreShell>
 
         {/* ─── Facebook Pixel (deferred) ─────────────────────────────── */}
         {FB_PIXEL_ID && (
