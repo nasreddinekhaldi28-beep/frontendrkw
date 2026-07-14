@@ -14,12 +14,12 @@ export const products: Product[] = [
     taglineAr: "ألم الركبة يسرق حركتك — استرجعها في ١٥ دقيقة",
     descriptionAr:
       "جهاز علاج الركبة المتطور يجمع بين الحرارة العلاجية والضوء الأحمر (660nm) والمساج الاهتزازي في جهاز واحد — يخفف ألم المفاصل والتيبّس ويحسّن الحركة من راحة بيتك، بدون حبوب وبدون عيادات. مصمم بالتعاون مع أخصائيي العلاج الطبيعي.",
-    image: placeholderImg("مساج الركبة", "1E3A8A"),
+    image: "/products/knee-main.png",
     images: [
-      placeholderImg("مساج الركبة", "1E3A8A"),
-      placeholderImg("على الركبة", "2D4ED8"),
-      placeholderImg("الضوء الأحمر", "DC2626"),
-      placeholderImg("حرارة + اهتزاز", "D97706"),
+      "/products/knee-main.png",
+      "/products/knee-lifestyle.png",
+      "/products/knee-redlight.png",
+      "/products/knee-mechanism.png",
     ],
     basePrice: 29.9,
     otoPrice: 25.4, // 15% off
