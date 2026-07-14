@@ -542,12 +542,12 @@ export const products: Product[] = [
     taglineAr: "وقفة واثقة وظهر مستقيم — بدون ما تفكّر",
     descriptionAr:
       "مصحّح وضعية مريح يسحب كتفيك للخلف بلطف ويعيد ظهرك لوضعه الطبيعي — يخفف ألم الرقبة وأعلى الظهر الناتج عن الجوال والمكتب، ويمنحك وقفة أكثر ثقة.",
-    image: placeholderImg("مصحح الوضعية", "0891B2"),
+    image: "/products/posture-main.png",
     images: [
-      placeholderImg("مصحح الوضعية", "0891B2"),
-      placeholderImg("كتفين للخلف", "0E7490"),
-      placeholderImg("خفيف ومخفي", "2D4ED8"),
-      placeholderImg("وقفة واثقة", "1E3A8A"),
+      "/products/posture-main.png",
+      "/products/posture-office.png",
+      "/products/posture-home.png",
+      "/products/posture-flex.png",
     ],
     basePrice: 9.9,
     otoPrice: 5.9, // deep OTO discount (~40%)
@@ -572,16 +572,19 @@ export const products: Product[] = [
     mechanism: [
       {
         icon: "🎯",
+        image: "/products/posture-mech-sensor.png",
         titleAr: "محاذاة الكتفين",
         descAr: "يعيد الكتفين لوضعهما الطبيعي ويقلّل الضغط على الرقبة والفقرات العلوية.",
       },
       {
         icon: "🧠",
+        image: "/products/posture-mech-train.png",
         titleAr: "إعادة تدريب العضلات",
         descAr: "الاستخدام المنتظم يدرّب عضلات ظهرك على الوقفة الصحيحة حتى بدون الجهاز.",
       },
       {
         icon: "👕",
+        image: "/products/posture-mech-alert.png",
         titleAr: "خفيف ومريح",
         descAr: "تصميم رفيع يُلبس تحت الملابس بدون أن يظهر أو يزعج.",
       },
