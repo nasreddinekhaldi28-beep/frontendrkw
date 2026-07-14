@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import { productsBySlug, products } from "@/lib/products";
 import ProductHero from "@/components/product/ProductHero";
 import StickyAddToCart from "@/components/product/StickyAddToCart";
 import PainMirror from "@/components/product/PainMirror";
 import BenefitsSection from "@/components/product/BenefitsSection";
-import MechanismSection from "@/components/product/MechanismSection";
-import ResultsTimeline from "@/components/product/ResultsTimeline";
-import GuaranteeSection from "@/components/product/GuaranteeSection";
-import ReviewsSection from "@/components/product/ReviewsSection";
-import FAQSection from "@/components/product/FAQSection";
-import AfterOrderSection from "@/components/product/AfterOrderSection";
-import CrossSells from "@/components/product/CrossSells";
 import ViewContentTracker from "./ViewContentTracker";
+
+// Below-fold sections — lazy loaded to keep above-fold paint fast
+const MechanismSection = dynamic(() => import("@/components/product/MechanismSection"));
+const ResultsTimeline = dynamic(() => import("@/components/product/ResultsTimeline"));
+const GuaranteeSection = dynamic(() => import("@/components/product/GuaranteeSection"));
+const ReviewsSection = dynamic(() => import("@/components/product/ReviewsSection"));
+const FAQSection = dynamic(() => import("@/components/product/FAQSection"));
+const AfterOrderSection = dynamic(() => import("@/components/product/AfterOrderSection"));
+const CrossSells = dynamic(() => import("@/components/product/CrossSells"));
 
 interface Props {
   params: { slug: string };

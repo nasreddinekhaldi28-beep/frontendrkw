@@ -35,6 +35,7 @@ export default function Header() {
               src="/logo.png"
               alt="راحة الكويت"
               fill
+              sizes="40px"
               className="object-cover"
               priority
             />

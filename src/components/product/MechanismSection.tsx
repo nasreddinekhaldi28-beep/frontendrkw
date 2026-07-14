@@ -39,6 +39,8 @@ export default function MechanismSection({ product }: { product: Product }) {
                         src={step.image ?? `https://placehold.co/600x450/1E3A8A/FFFFFF?text=${encodeURIComponent(step.titleAr)}`}
                         alt={step.titleAr}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
                         className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105"
                       />
                     </div>

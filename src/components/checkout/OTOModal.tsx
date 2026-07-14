@@ -142,6 +142,8 @@ export default function OTOModal() {
                   src={otoProduct.image}
                   alt={otoProduct.nameAr}
                   fill
+                  sizes="128px"
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>

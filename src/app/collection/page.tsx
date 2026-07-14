@@ -39,6 +39,8 @@ export default function CollectionPage() {
                     src={p.image}
                     alt={p.nameAr}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                     className="object-cover group-hover:scale-[1.07] transition-transform duration-[600ms] ease-smooth"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

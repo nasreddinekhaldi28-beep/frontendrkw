@@ -54,7 +54,7 @@ export default function StickyAddToCart({ product }: { product: Product }) {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-2 sm:gap-3">
         {/* Product thumbnail — hidden on very small screens to make room */}
         <div className="relative w-11 h-11 rounded-xl overflow-hidden flex-shrink-0 ring-1 ring-black/5 hidden sm:block">
-          <Image src={product.image} alt={product.nameAr} fill className="object-cover" />
+          <Image src={product.image} alt={product.nameAr} fill sizes="48px" loading="lazy" className="object-cover" />
         </div>
 
         {/* Price */}

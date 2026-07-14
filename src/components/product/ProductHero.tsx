@@ -51,6 +51,7 @@ export default function ProductHero({ product }: Props) {
                 src={product.images[mainImg] || product.image}
                 alt={product.nameAr}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-[600ms] ease-smooth hover:scale-105"
                 priority
               />
@@ -78,7 +79,7 @@ export default function ProductHero({ product }: Props) {
                         : "border-gray-200 hover:border-gray-400 opacity-80 hover:opacity-100"
                     )}
                   >
-                    <Image src={img} alt={`صورة ${i + 1}`} fill className="object-cover" />
+                    <Image src={img} alt={`صورة ${i + 1}`} fill sizes="64px" loading="lazy" className="object-cover" />
                   </button>
                 ))}
               </div>

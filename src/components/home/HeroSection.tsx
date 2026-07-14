@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="bg-gradient-to-br from-brand-blue-dark via-brand-blue to-brand-blue-light text-white py-16 md:py-24 overflow-hidden relative">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Background blobs — hidden on mobile to reduce GPU paint cost */}
+      <div className="absolute inset-0 opacity-20 hidden md:block">
         <div className="absolute top-6 start-6 w-72 h-72 rounded-full bg-brand-blue-light blur-3xl animate-float-soft" />
         <div className="absolute bottom-6 end-14 w-[26rem] h-[26rem] rounded-full bg-brand-gold/60 blur-3xl animate-float-soft [animation-delay:1.5s]" />
       </div>

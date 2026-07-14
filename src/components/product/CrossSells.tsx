@@ -47,7 +47,7 @@ export default function CrossSells({ currentProduct }: { currentProduct: Product
             >
               <Link href={`/products/${p.slug}`} className="block">
                 <div className="relative aspect-[3/2] overflow-hidden">
-                  <Image src={p.image} alt={p.nameAr} fill className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105" />
+                  <Image src={p.image} alt={p.nameAr} fill sizes="(max-width: 640px) 100vw, 50vw" loading="lazy" className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105" />
                   {p.badge && (
                     <span className="absolute top-3 start-3 bg-brand-gold text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
                       {p.badge}

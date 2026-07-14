@@ -45,7 +45,7 @@ export default function CartItem({ item }: Props) {
     <div className="flex gap-3 bg-white rounded-xl p-3 shadow-soft border border-gray-100 hover:border-gray-200 transition-colors">
       {/* Image */}
       <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-        <Image src={item.image} alt={item.nameAr} fill className="object-cover" />
+        <Image src={item.image} alt={item.nameAr} fill sizes="64px" loading="lazy" className="object-cover" />
       </div>
 
       {/* Details */}

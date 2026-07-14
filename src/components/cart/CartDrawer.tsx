@@ -100,7 +100,7 @@ export default function CartDrawer() {
                         className="flex items-center gap-3 bg-blue-50 rounded-xl p-3 ring-1 ring-brand-blue/5 hover:ring-brand-blue/20 transition-all"
                       >
                         <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
-                          <Image src={p.image} alt={p.nameAr} fill className="object-cover" />
+                          <Image src={p.image} alt={p.nameAr} fill sizes="64px" loading="lazy" className="object-cover" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-xs font-bold text-gray-800 truncate">{p.nameAr}</p>

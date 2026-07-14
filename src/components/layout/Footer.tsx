@@ -24,6 +24,7 @@ export default function Footer() {
                   src="/logo.png"
                   alt="راحة الكويت"
                   fill
+                  sizes="56px"
                   className="object-cover"
                 />
               </div>
@@ -109,7 +110,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-200">
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5 rounded-full overflow-hidden opacity-70">
-              <Image src="/logo.png" alt="" fill className="object-cover" />
+              <Image src="/logo.png" alt="" fill sizes="20px" className="object-cover" />
             </div>
             <p>© {new Date().getFullYear()} راحة الكويت. جميع الحقوق محفوظة.</p>
           </div>
