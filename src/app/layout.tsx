@@ -17,11 +17,21 @@ export const metadata: Metadata = {
     "راحة الكويت — أجهزة الحجامة الكهربائية ومساج الأقدام وجل المفاصل. علاج احترافي في بيتك مع ضمان الجودة والتوصيل 1-2 يوم.",
   keywords: "حجامة, مساج أقدام, ألم الظهر, علاج مفاصل, كويت, راحة الكويت",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://rahatkwt.store"),
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     title: "راحة الكويت | أجهزة العلاج المنزلي #1",
     description: "علاج احترافي في بيتك — توصيل 1-2 يوم — الدفع عند الاستلام",
     type: "website",
     locale: "ar_KW",
+    images: [{ url: "/android-chrome-512x512.png" }],
   },
 };
 
