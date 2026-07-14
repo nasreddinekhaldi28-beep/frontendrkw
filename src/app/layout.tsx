@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
+const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || "1165746342434895";
 const TIKTOK_PIXEL_ID = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID;
 const SNAP_PIXEL_ID = process.env.NEXT_PUBLIC_SNAP_PIXEL_ID;
 
