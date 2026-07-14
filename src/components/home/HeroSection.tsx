@@ -69,11 +69,12 @@ export default function HeroSection() {
             <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-tr from-brand-gold/30 to-white/10 blur-2xl" />
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20">
               <Image
-                src="https://placehold.co/600x600/2D4ED8/FFFFFF?text=راحة+الكويت"
-                alt="راحة الكويت - أجهزة العلاج"
+                src="/hero.png"
+                alt="راحة الكويت — حياة بدون ألم"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_20%]"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             {/* Floating badges */}
