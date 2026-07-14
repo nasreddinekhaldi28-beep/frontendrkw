@@ -629,12 +629,12 @@ export const products: Product[] = [
     taglineAr: "شيل تعب الرقبة في أي وقت وأي مكان",
     descriptionAr:
       "جهاز مساج مصغّر بالنبضات الكهربائية والحرارة يستهدف شد الرقبة والكتف — صغير يدخل الجيب، تستخدمه في المكتب أو السيارة أو البيت لراحة فورية من التوتر العضلي.",
-    image: placeholderImg("مساج الرقبة", "BE185D"),
+    image: "/products/neck-main.png",
     images: [
-      placeholderImg("مساج الرقبة", "BE185D"),
-      placeholderImg("نبضات + حرارة", "DB2777"),
-      placeholderImg("صغير ومحمول", "2D4ED8"),
-      placeholderImg("في المكتب", "1E3A8A"),
+      "/products/neck-main.png",
+      "/products/neck-office.png",
+      "/products/neck-car.png",
+      "/products/neck-portable.png",
     ],
     basePrice: 8.9,
     otoPrice: 4.9, // deep OTO discount (~45%)
@@ -659,16 +659,19 @@ export const products: Product[] = [
     mechanism: [
       {
         icon: "⚡",
+        image: "/products/neck-mech-tens.png",
         titleAr: "نبضات TENS",
         descAr: "نبضات كهربائية لطيفة تحفّز العضلات وتقطع إشارات الألم في الرقبة والكتف.",
       },
       {
         icon: "🌡️",
+        image: "/products/neck-mech-heat.png",
         titleAr: "حرارة مريحة",
         descAr: "حرارة خفيفة ترخي العضلات المشدودة وتزيد تدفق الدم للمنطقة.",
       },
       {
         icon: "🎒",
+        image: "/products/neck-mech-mobile.png",
         titleAr: "محمول بالكامل",
         descAr: "حجم صغير يدخل الجيب أو الشنطة — راحة في المكتب، السيارة، أو السفر.",
       },
