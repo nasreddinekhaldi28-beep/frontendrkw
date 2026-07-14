@@ -356,12 +356,12 @@ export const products: Product[] = [
     taglineAr: "راحة المفاصل من الطبيعة — تحسها من أول تطبيق",
     descriptionAr:
       "تركيبة طبيعية مركزة للمفاصل والعضلات — ضعه على الركبة أو الكتف أو الظهر واحس بالدفء والراحة خلال دقائق. الأفضل مع أجهزة الراحة للنتيجة الأسرع.",
-    image: placeholderImg("جل المفاصل", "D97706"),
+    image: "/products/gel-main.png",
     images: [
-      placeholderImg("جل المفاصل", "D97706"),
-      placeholderImg("المكونات الطبيعية", "F59E0B"),
-      placeholderImg("على الركبة", "10B981"),
-      placeholderImg("نتيجة سريعة", "1E3A8A"),
+      "/products/gel-main.png",
+      "/products/gel-natural.png",
+      "/products/gel-apply.png",
+      "/products/gel-lifestyle.png",
     ],
     basePrice: 6.9,
     otoPrice: 3.9, // deep OTO discount (~43%) — cheap add-on, boosts attach rate
@@ -388,21 +388,25 @@ export const products: Product[] = [
     mechanism: [
       {
         icon: "🌿",
+        image: "/products/gel-mech-natural.png",
         titleAr: "مستخلصات طبيعية مركزة",
         descAr: "خليط من المكونات الطبيعية المعروفة بخصائصها المسكنة والمضادة للالتهاب — تعمل بسرعة على المنطقة المؤلمة.",
       },
       {
         icon: "🔥",
+        image: "/products/gel-mech-warming.png",
         titleAr: "تأثير الإحماء (Warming Effect)",
         descAr: "يولد دفء لطيف يحفز الدورة الدموية في المفصل — مثل الكمادة الدافئة لكن أعمق تأثيراً.",
       },
       {
         icon: "💧",
+        image: "/products/gel-mech-absorb.png",
         titleAr: "امتصاص سريع",
         descAr: "تركيبة خفيفة تتسرب للأنسجة العميقة بسرعة دون إحساس دهني.",
       },
       {
         icon: "🤝",
+        image: "/products/gel-mech-combo.png",
         titleAr: "أقوى مع الجهاز",
         descAr: "استخدامه قبل جلسة الحجامة أو مساج الأقدام أو الركبة يضاعف فاعلية العلاج.",
       },
