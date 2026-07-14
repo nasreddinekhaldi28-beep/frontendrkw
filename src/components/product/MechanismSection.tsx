@@ -33,13 +33,15 @@ export default function MechanismSection({ product }: { product: Product }) {
               >
                 {/* Image */}
                 <div className={!isEven ? "md:[direction:ltr]" : ""}>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 shadow-card ring-1 ring-black/5 group">
-                    <Image
-                      src={`https://placehold.co/600x450/1E3A8A/FFFFFF?text=${encodeURIComponent(step.titleAr)}`}
-                      alt={step.titleAr}
-                      fill
-                      className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105"
-                    />
+                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white shadow-card ring-1 ring-black/5 group p-2">
+                    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-50">
+                      <Image
+                        src={step.image ?? `https://placehold.co/600x450/1E3A8A/FFFFFF?text=${encodeURIComponent(step.titleAr)}`}
+                        alt={step.titleAr}
+                        fill
+                        className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                 </div>
 

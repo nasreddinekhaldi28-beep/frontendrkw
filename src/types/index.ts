@@ -32,6 +32,7 @@ export interface Product {
 
 export interface MechanismStep {
   icon: string;
+  image?: string;
   titleAr: string;
   descAr: string;
 }
