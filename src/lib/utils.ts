@@ -11,6 +11,21 @@ export function formatKWD(amount: number): string {
   return `${amount.toFixed(3)} د.ك`;
 }
 
+function getCookie(name: string): string {
+  if (typeof document === "undefined") return "";
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
+function getFbc(): string {
+  const fromCookie = getCookie("_fbc");
+  if (fromCookie) return fromCookie;
+  const params = new URLSearchParams(window.location.search);
+  const fbclid = params.get("fbclid");
+  if (!fbclid) return "";
+  return `fb.1.${Date.now()}.${fbclid}`;
+}
+
 export function buildOrderPayload(
   cartItems: CartItem[],
   otoProduct: OTOProduct | null,
@@ -55,5 +70,10 @@ export function buildOrderPayload(
     currency: "KWD",
     purchase_event_id: purchaseEventId,
     client_user_agent: typeof navigator !== "undefined" ? navigator.userAgent : "",
+    page_url: typeof window !== "undefined" ? window.location.href : undefined,
+    fbp: getCookie("_fbp") || undefined,
+    fbc: getFbc() || undefined,
+    ttp: getCookie("_ttp") || undefined,
+    scid: getCookie("_scid") || undefined,
   };
 }

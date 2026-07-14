@@ -46,9 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-cairo">
         <StoreShell>{children}</StoreShell>
 
-        {/* ─── Facebook Pixel (deferred) ─────────────────────────────── */}
+        {/* ─── Facebook Pixel (lazy — deferred until page idle) ─────── */}
         {FB_PIXEL_ID && (
-          <Script id="fb-pixel" strategy="afterInteractive">
+          <Script id="fb-pixel" strategy="lazyOnload">
             {`
               !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -63,9 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Script>
         )}
 
-        {/* ─── TikTok Pixel (deferred) ───────────────────────────────── */}
+        {/* ─── TikTok Pixel (lazy — deferred until page idle) ───────── */}
         {TIKTOK_PIXEL_ID && (
-          <Script id="tiktok-pixel" strategy="afterInteractive">
+          <Script id="tiktok-pixel" strategy="lazyOnload">
             {`
               !function (w, d, t) {
                 w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];

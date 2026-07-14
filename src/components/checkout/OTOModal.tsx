@@ -50,7 +50,12 @@ export default function OTOModal() {
     const skus = payload.items.map((i) => i.sku);
 
     // Fire web purchase pixel immediately (server-side CAPI is triggered by backend)
-    trackPurchase(purchaseEventId, total, skus);
+    trackPurchase(
+      purchaseEventId,
+      total,
+      skus,
+      { name: formData.name, phone: formData.phone }
+    );
 
     try {
       const res = await fetch(`${API_URL}/orders`, {

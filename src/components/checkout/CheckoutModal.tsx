@@ -7,7 +7,7 @@ import { useCartStore } from "@/lib/cart-store";
 import { useCheckoutStore } from "@/lib/checkout-store";
 import { getOTOProduct, productsBySku } from "@/lib/products";
 import { formatKWD } from "@/lib/utils";
-import { generatePurchaseEventId } from "@/lib/pixels";
+import { generatePurchaseEventId, trackLead } from "@/lib/pixels";
 import type { OTOProduct } from "@/types";
 
 const schema = z.object({
@@ -47,6 +47,7 @@ export default function CheckoutModal() {
 
   function onSubmit(data: FormValues) {
     const eventId = generatePurchaseEventId();
+    trackLead({ name: data.name, phone: data.phone });
     submitForm(data, otoProduct, eventId);
     reset();
   }

@@ -100,6 +100,11 @@ export interface CreateOrderPayload {
   currency: string;
   purchase_event_id: string;
   client_user_agent: string;
+  page_url?: string;
+  fbp?: string;
+  fbc?: string;
+  ttp?: string;
+  scid?: string;
 }
 
 export interface OrderResponse {
@@ -121,4 +126,10 @@ export interface CAPIEventPayload {
   currency?: string;
   page_url?: string;
   client_user_agent?: string;
+  customer_phone?: string;
+  customer_name?: string;
+  fbp?: string;
+  fbc?: string;
+  ttp?: string;
+  scid?: string;
 }

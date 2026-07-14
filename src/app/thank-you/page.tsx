@@ -70,7 +70,13 @@ export default function ThankYouPage() {
 
         const eventId = getStoredPurchaseEventId();
         if (eventId) {
-          trackPurchase(eventId, parsed.total, parsed.items.map((i) => i.sku));
+          trackPurchase(
+            eventId,
+            parsed.total,
+            parsed.items.map((i) => i.sku),
+            parsed.phone ? { name: parsed.name, phone: parsed.phone } : undefined,
+            parsed.orderNumber
+          );
         }
       } catch {
         // ignore
