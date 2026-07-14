@@ -455,12 +455,12 @@ export const products: Product[] = [
     taglineAr: "سند لظهرك طوال اليوم — وقفة أصح وألم أقل",
     descriptionAr:
       "حزام طبي مريح يسند أسفل الظهر ويوزّع الضغط بالتساوي أثناء الجلوس أو الوقوف أو رفع الأشياء — يقلّل آلام أسفل الظهر ويحسّن وقفتك على مدار اليوم.",
-    image: placeholderImg("حزام الظهر", "7C3AED"),
+    image: "/products/belt-main.png",
     images: [
-      placeholderImg("حزام الظهر", "7C3AED"),
-      placeholderImg("سند أسفل الظهر", "6D28D9"),
-      placeholderImg("قابل للتعديل", "2D4ED8"),
-      placeholderImg("تحت الملابس", "1E3A8A"),
+      "/products/belt-main.png",
+      "/products/belt-office.png",
+      "/products/belt-under.png",
+      "/products/belt-macro.png",
     ],
     basePrice: 7.9,
     otoPrice: 4.9, // deep OTO discount (~38%)
@@ -485,16 +485,19 @@ export const products: Product[] = [
     mechanism: [
       {
         icon: "🎯",
+        image: "/products/belt-mech-align.png",
         titleAr: "دعم مستهدف للفقرات",
         descAr: "دعامات مرنة تسند أسفل الظهر وتوزّع الحِمل بعيداً عن الفقرات المتعبة.",
       },
       {
         icon: "🧍",
+        image: "/products/belt-mech-muscle.png",
         titleAr: "تصحيح الوقفة",
         descAr: "يذكّر جسمك بالوقفة الصحيحة ويقلّل الانحناء الذي يسبب الألم المزمن.",
       },
       {
         icon: "🌬️",
+        image: "/products/belt-mech-breeze.png",
         titleAr: "قماش مريح متنفّس",
         descAr: "خامة خفيفة لا تسبب التعرّق، مريحة للبس الطويل في الشغل أو السواقة.",
       },
