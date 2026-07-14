@@ -133,12 +133,12 @@ export const products: Product[] = [
     taglineAr: "ظهرك ما يستاهل كل هذا الألم",
     descriptionAr:
       "جهاز الحجامة الكهربائي المتطور يجمع بين تقنية الشفط الهوائي والضوء الأحمر العلاجي لتخفيف ألم الظهر والرقبة والكتفين من راحة بيتك — بدون عيادات وبدون حرق.",
-    image: placeholderImg("جهاز الحجامة"),
+    image: "/products/cupping-main.png",
     images: [
-      placeholderImg("جهاز الحجامة", "1E3A8A"),
-      placeholderImg("على الظهر", "2D4ED8"),
-      placeholderImg("الضوء الأحمر", "D97706"),
-      placeholderImg("بدون سلك", "059669"),
+      "/products/cupping-main.png",
+      "/products/cupping-lifestyle.png",
+      "/products/cupping-redlight.png",
+      "/products/cupping-controls.png",
     ],
     basePrice: 17.9,
     otoPrice: 15.2, // 15% off
@@ -165,21 +165,25 @@ export const products: Product[] = [
     mechanism: [
       {
         icon: "🔴",
+        image: "/products/cupping-mech-redlight.png",
         titleAr: "الضوء الأحمر العلاجي",
         descAr: "أمواج الضوء الأحمر (630nm) تخترق الأنسجة بعمق لتحفيز إنتاج الطاقة الخلوية وتسريع التعافي — نفس التقنية المستخدمة في عيادات الفيزيوثيرابي.",
       },
       {
         icon: "💨",
+        image: "/products/cupping-mech-suction.png",
         titleAr: "الشفط الهوائي الذكي",
         descAr: "يرفع الأنسجة بلطف ويحسن الدورة الدموية في المنطقة المؤلمة — نفس مبدأ الحجامة التقليدية لكن بتحكم كامل وبدون أي ألم.",
       },
       {
         icon: "🎚️",
+        image: "/products/cupping-mech-levels.png",
         titleAr: "12 مستوى تحكم دقيق",
         descAr: "من مساج خفيف للاسترخاء اليومي إلى علاج عميق للألم المزمن — أنت تتحكم في شدة الجلسة.",
       },
       {
         icon: "🔋",
+        image: "/products/cupping-mech-wireless.png",
         titleAr: "لاسلكي وقابل للشحن",
         descAr: "بطارية تدوم 4+ ساعات. شحن USB-C سريع. استخدمه على الأريكة، في المكتب، أو في السيارة.",
       },
